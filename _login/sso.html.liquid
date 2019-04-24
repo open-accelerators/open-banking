@@ -1,0 +1,13 @@
+{% unless user.oauth2? %}
+  <ul class="list-auth-provider list-unstyled">
+    {% for auth_provider in site.authentication_providers %}
+    <div class="form-group">
+        <li>
+      <a class="btn btn-primary btn-block auth-provider auth-provider-{{auth_provider.kind}}" href="{{auth_provider.authorize_url}}" {% if auth_provider.kind == "keycloak" %} style="display: flex; align-items: center; justify-content: center; height: 100%;"{% endif %}>
+            <i {% if auth_provider.kind == "keycloak" %}class="fab redhat" style="background-image: url(../vendor/fontawesome-free/css/font-logos.svg); background-size: 1.125rem; width: 1.125rem; height: 1.125rem; margin-right: 0.25rem;"{% else %}class="fab fa-{{auth_provider.kind}}{%endif%}" style="color: black;"></i> Authenticate with {{ auth_provider.name }}
+          </a>
+        </li>
+    </div>
+    {% endfor %}
+  </ul>
+{% endunless %}

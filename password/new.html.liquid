@@ -1,0 +1,24 @@
+<div class="container">
+      <div class="card card-login mx-auto mt-5">
+        <div class="card-header">Reset Password</div>
+        <div class="card-body">
+          <div class="text-center mb-4">
+            <h4>Forgot your password?</h4>
+            <p>Enter your email address and we will send you instructions on how to reset your password.</p>
+          </div>
+          {% form 'password_reset', { class: 'form-horizontal' } %}
+            <div class="form-group">
+              <div class="form-label-group">
+                <input type="email" id="email" class="form-control" placeholder="Enter email address" required="required" autofocus="autofocus">
+                <label for="email">Enter email address</label>
+              </div>
+            </div>
+            <input name="commit" type="submit" class="btn btn-warning btn-block" value="Reset Password"></input>
+          {% endform %}
+          <div class="text-center">
+            <a class="d-block small mt-3" href="{{ urls.signup }}">Register an Account</a>
+            <a class="d-block small" href="{{ urls.login }}">Login Page</a>
+          </div>
+        </div>
+      </div>
+    </div>

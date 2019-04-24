@@ -1,0 +1,64 @@
+<div class="card mb-3">
+  <div class="card-header">
+    <i class="fas fa-table"></i>
+    Applications
+    <div class="pull-right">
+      <div class="btn-group">
+        <a href="{{ urls.new_application }}" title="Create new application" class="btn-header" type="submit">Create new application</a>
+      </div>
+    </div>
+  </div>
+  <div class="card-body">
+    <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Name</th>
+          
+            <th>Service</th>
+          
+          <th>Credentials</th>
+          <th>State</th>
+          <th colspan="2"></th>
+        </tr>
+      </thead>
+      <tfoot>
+        <tr>
+          <th>Name</th>
+          
+            <th>Service</th>
+          
+          <th>Credentials</th>
+          <th>State</th>
+          <th>
+          </th>
+        </tr>
+      </tfoot>
+      <tbody>
+        {% for service in current_account.subscribed_services %}
+            {% for application in service.applications %}
+              <tr class="{% cycle 'applications': 'odd', 'even' %}" id="application_{{ application.id }}">
+                <td>
+                  {{ application.name | link_to: application.url }}
+                </td>
+                
+                  <td>{{ service.name }}</td>
+                
+                <td>{{ application.key }}</td>
+                <td>{{ application.state }}</td>
+                <td>
+                  {% if application.can.be_updated? %}
+                    <a href="{{ application.edit_url }}">
+                      <i class="fas fa-pencil"></i>
+                    </a>
+                  {% endif %}
+                </td>
+              </tr>
+            {% endfor %}
+        {% endfor %}
+      </tbody>
+    </table>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,53 @@
+{% include 'messages/menu'%}
+<div class="card mb-3">
+<div class="card-header">
+<i class="fas fa-envelope"></i>
+Messages
+</div>
+<div class="card-body">
+  <div class="table-responsive">
+    <table class="table table-bordered" id="dataTable" width="100%" cellspacing="0">
+      <thead>
+        <tr>
+          <th>Subject</th>
+          <th>From</th>
+          <th>Date sent</th>
+          <th></th>
+        </tr>
+      </thead>
+      <tbody>
+        {% if messages.size > 0  %}
+          {% for message in messages %}
+            <tr class="{% cycle 'messages': 'odd', 'even' %}">
+              <td>{{ message.subject | link_to: message.url }}</td>
+              <td>{{ message.sender | link_to: message.url }}</td>
+              <td>{{ message.created_at }}</td>
+              <td style="text-align: center;">
+                {{ 'Restore' | delete_button: message.url, class: 'btn btn-default' }}
+              </td>
+            </tr>
+          {% endfor %}
+        {% else %}
+          <tr>
+            <td class="empty" colspan="4">Your trash is empty.</td>
+          </tr>
+        {% endif %}
+      </tbody>
+      <tfoot>
+        <tr>
+          <th>Subject</th>
+          <th>From</th>
+          <th>Date sent</th>
+          <th></th>
+        </tr>
+      </tfoot>
+    </table>
+  </div>
+  </div>
+  <div class="card-footer">
+    {% if messages.size > 0  %}
+      <a href="{{ urls.empty_messages_trash }}" class="btn btn-danger">Empty the trash</a>
+    {% endif %}
+  </div>
+</div>
+{% include 'shared/pagination' with pagination %}

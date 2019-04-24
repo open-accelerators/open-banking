@@ -1,0 +1,40 @@
+<div class="container">
+      <div class="card card-login mx-auto mt-5">
+        <div class="card-header">Login</div>
+        <div class="card-body">
+          {% include 'login/sso' %}
+        {% form 'login', user, class: 'form-horizontal' %}
+          {% include 'login/cas' with cas %}
+            <div class="form-group" id="session_username_input">
+              <div class="form-label-group">
+                <input type="text" id="session_username" name="username" class="form-control" placeholder="Email address or Username" required="required" autofocus="autofocus">
+                <label for="session_username">Username or Email</label>
+              </div>
+            </div>
+            <div class="form-group" id="session_password_input">
+              <div class="form-label-group">
+                <input type="password" id="session_password" name="password" class="form-control" placeholder="Password" required="required">
+                <label for="session_password">Password</label>
+              </div>
+            </div>
+            <div class="form-group">
+              <div class="checkbox">
+                <label>
+                  <input type="checkbox" value="remember-me">
+                  Remember Password
+                </label>
+              </div>
+            </div>
+            <!--<a class="btn btn-primary btn-block" href="index.html">Login</a>-->
+          <input name="commit" type="submit" value="Sign in" class="btn btn-primary btn-block">
+          {% endform %}
+          <div class="text-center">
+            {% if provider.signups_enabled? %}
+            <a class="d-block small mt-3" href="{{ urls.signup }}">Register an Account</a>
+            {% endif %}
+            <a class="d-block small" href="{{ urls.forgot_password }}">Forgot Password?</a>
+          </div>
+        </div>
+      </div>
+    </div>
+

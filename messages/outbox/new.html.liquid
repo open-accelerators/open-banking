@@ -1,0 +1,41 @@
+{% include 'messages/menu'%}
+<div class="card mb-3">
+      <div class="card-header">
+      New message
+      </div>
+      <div class="card-body">
+        {% form 'message.create', message, { class: 'form-horizontal' } %}
+          <div class="form-group">
+            <label class="col-md-3 control-label">To</label>
+            <div class="col-md-6">
+              <p class="form-control-static">{{ message.to }}</p>
+            </div>
+          </div>
+          <div class="form-group">
+            <label class="col-md-3 control-label" for="message_subject">Subject</label>
+            <div class="col-md-6">
+              <input tabindex="1"
+                  autofocus="autofocus"
+                  id="message_subject" name="message[subject]" type="text" class="form-control">
+            </div>
+          </div>
+
+          <div class="form-group">
+            <label for="message_body" class="col-md-3 control-label">Body</label>
+            <div class="col-md-7">
+              <textarea id="message_body"
+                        name="message[body]"
+                        rows="10"
+                        class="form-control"
+                        tabindex="1"></textarea>
+            </div>
+          </div>
+
+         <div class="form-group">
+            <div class="col-md-10">
+              <button type="submit" class="btn btn-primary" tabindex="3">Send</button>
+            </div>
+          </div>
+        {% endform %}
+      </div>
+</div>

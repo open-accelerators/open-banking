@@ -1,0 +1,296 @@
+.StatsChartContainer.is-loading {
+    opacity: .5
+}
+
+.StatsChartContainer.is-loading::before {
+    background-image: url(//d3r3dpljzzvqst.cloudfront.net/assets/spinner-40d1bc7fcf2a0405e74ebf06fdbb7571.svg);
+    background-position: center;
+    background-repeat: no-repeat;
+    bottom: 50%;
+    content: '';
+    height: 42px;
+    left: 50%;
+    position: absolute;
+    width: 42px
+}
+
+.StatsChartContainer .c3 svg {
+    font: 10px 'Lucida Grande', verdana, sans-serif
+}
+
+.StatsChartContainer .c3-line {
+    stroke-width: 2px
+}
+
+.StatsChartContainer .c3-grid line.c3-ygrid,
+.StatsChartContainer .c3-axis-y .tick line {
+    stroke: #dfdfdf
+}
+
+.StatsChartContainer .c3-ygrid {
+    stroke-dasharray: 0
+}
+
+.StatsChartContainer .c3-axis-y .domain {
+    display: none
+}
+
+.StatsChartContainer .c3-tooltip-container {
+    border: 1px solid #dfdfdf;
+    border-radius: 6px;
+    -moz-box-shadow: 0 0 6px rgba(68, 68, 68, 0.1);
+    -webkit-box-shadow: 0 0 6px rgba(68, 68, 68, 0.1);
+    box-shadow: 0 0 6px rgba(68, 68, 68, 0.1);
+    opacity: .98
+}
+
+.StatsChartContainer .c3-tooltip {
+    border: 0;
+    border-radius: 6px;
+    -moz-box-shadow: 0 0 0 transparent;
+    -webkit-box-shadow: 0 0 0 transparent;
+    box-shadow: 0 0 0 transparent;
+    opacity: 1
+}
+
+.StatsChartContainer .c3-tooltip th {
+    background-color: #fff;
+    border-top-left-radius: 6px;
+    border-top-right-radius: 6px;
+    color: #444;
+    padding: 2px 10px
+}
+
+.StatsChartContainer .c3-tooltip tr {
+    border: 0;
+    border-bottom: 1px solid #dfdfdf
+}
+
+.StatsChartContainer .c3-tooltip tr:last-child {
+    border-bottom: 0
+}
+
+.StatsChartContainer .c3-tooltip tr:last-child td:first-child {
+    border-bottom-left-radius: 6px
+}
+
+.StatsChartContainer .c3-tooltip tr:last-child td:last-child {
+    border-bottom-right-radius: 6px
+}
+
+.StatsChartContainer .c3-tooltip td {
+    border-left: none;
+    padding: 0 10px
+}
+
+.StatsMenu {
+    border: 1px solid #eee;
+    color: #333;
+    display: inline-block;
+    font-size: 12px;
+    margin: 0 16px 24px 0;
+    padding: 16px
+}
+
+.StatsMenu-period {
+    display: inline-block;
+    list-style: none;
+    margin: 0;
+    padding: 0
+}
+
+.StatsMenu-periodItem {
+    display: inline-block;
+    margin: 0 4px
+}
+
+.StatsMenu-custom {
+    border-left: 1px solid #eee;
+    display: inline-block;
+    font-size: 10px;
+    font-style: italic;
+    margin-left: 4px;
+    padding-left: 4px
+}
+
+.StatsMenu-link,
+.StatsMenu-Link {
+    color: #333;
+    cursor: pointer;
+    text-decoration: underline
+}
+
+.StatsMenu-periodLink.is-selected,
+.StatsMenu-customLink.is-selected {
+    font-weight: bold;
+    text-decoration: none
+}
+
+.StatsMenu-customInput {
+    display: none
+}
+
+.StatsMethodsTable-name.is-children {
+    background-image: url(//d3r3dpljzzvqst.cloudfront.net/assets/child_metric_background-5ae4c491d87d4080355b7d73e55abc60.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 24px
+}
+
+.StatsSelector {
+    display: inline-block;
+    margin-bottom: 24px;
+    position: relative
+}
+
+.StatsSelector-item {
+    background: none;
+    clear: both;
+    color: #333;
+    cursor: pointer;
+    display: block;
+    font-weight: normal;
+    padding: 3px 20px;
+    text-align: inherit;
+    text-decoration: none !important;
+    white-space: nowrap;
+    width: 100%
+}
+
+.StatsSelector-item.is-children {
+    font-style: italic;
+    padding-left: 30px
+}
+
+.StatsSelector-item.is-children::before {
+    content: '- '
+}
+
+.StatsSelector-item.is-selected {
+    font-weight: bold
+}
+
+.StatsSelector-toggle {
+    border: 1px solid #eee;
+    font-size: 12px;
+    padding: 16px;
+    width: auto
+}
+
+.StatsSelector-toggle::after {
+    border-left: 0.5em solid transparent;
+    border-right: 0.5em solid transparent;
+    border-top: 0.5em solid;
+    content: '';
+    display: inline-block;
+    height: 0;
+    margin-left: 4px;
+    margin-right: 4px;
+    vertical-align: middle;
+    width: 0
+}
+
+.StatsSelector-menu {
+    background-clip: padding-box;
+    background-color: #fff;
+    border: 1px solid #eee;
+    color: #333;
+    display: none;
+    float: left;
+    font-size: 12px;
+    left: 0;
+    list-style: none;
+    margin: 2px 0 0;
+    min-width: 160px;
+    padding: 5px 0;
+    position: absolute;
+    text-align: left;
+    top: 100%;
+    z-index: 1000
+}
+
+.StatsSelector.is-open>.StatsSelector-menu {
+    display: block
+}
+
+.StatsMessages-list {
+    margin-bottom: 16px;
+    padding-left: 32px
+}
+
+.StatsMessages-title {
+    margin-bottom: 16px
+}
+
+.StatsLogs.is-hidden {
+    display: none
+}
+
+.StatsLogs-pagination-item {
+    display: inline-block;
+    padding: 0 2px
+}
+
+.StatsLogs-pagination-link {
+    cursor: pointer
+}
+
+.StatsApplicationsSelectorContainer {
+    float: right
+}
+
+.StatsTable {
+    line-height: 2.6;
+    margin-bottom: 24px;
+    margin-top: 12px;
+    width: 100%
+}
+
+.StatsTable td,
+.StatsTable th {
+    border-bottom: 1px solid #eee
+}
+
+.u-amount {
+    text-align: right
+}
+
+.u-tabular-number {
+    font-family: 'Source Code Pro', 'Bitstream Vera Sans Mono', 'DejaVu Sans Mono', 'Monaco', Courier, monospace
+}
+
+.StatsMethodsTable-name.is-children {
+    background-image: url(//d3r3dpljzzvqst.cloudfront.net/assets/child_metric_background-5ae4c491d87d4080355b7d73e55abc60.png);
+    background-position: left center;
+    background-repeat: no-repeat;
+    padding-left: 24px
+}
+
+.StatsMenuContainer,
+.StatsSelectorContainer {
+    display: inline-block
+}
+
+.CsvLinkContainer {
+    text-align: right
+}
+
+.Stats-message--notice {
+    color: #9b9b9b;
+    font-size: 10px;
+    font-style: italic;
+    margin: 0
+}
+
+.Stats-message--notice.is-hidden {
+    display: none
+}
+
+/* Custom stats styles */
+
+#methods_table {
+    width: 100%;
+    margin-bottom: 1rem;
+    background-color: transparent;
+    border-collapse: collapse
+}

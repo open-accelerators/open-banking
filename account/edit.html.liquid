@@ -1,0 +1,26 @@
+{% include 'users_menu' %}
+<div class="card mb-3">
+      <div class="card-header">
+        <a href="{{ urls.account_overview }}">
+          <i class="fas fa-chevron-left"></i>
+          Cancel
+        </a>
+      </div>
+      <div class="card-body">
+        <div class="col-md-6">
+        {% form 'account.personal_details', current_account, class: "form-horizontal" %}
+
+            {% for field in current_account.fields %}
+              {% include 'field' with field %}
+            {% endfor %}
+
+            <div class="form-group">
+              
+                <input class="btn btn-primary" name="commit" type="submit" value="Update Account" />
+              
+            </div>
+
+        {% endform %}
+        </div>
+      </div>
+</div>
