@@ -1,0 +1,140 @@
+{
+	"id": "13797abe-f069-48de-881b-90b25d886bff",
+	"name": "Example",
+	"description": "",
+	"auth": null,
+	"events": null,
+	"variables": [],
+	"order": [
+		"4bfd0a11-22ac-41a1-9f93-1c624059b471"
+	],
+	"folders_order": [],
+	"folders": [],
+	"requests": [
+		{
+			"id": "4bfd0a11-22ac-41a1-9f93-1c624059b471",
+			"name": "Example Request",
+			"url": "https://api.hsbc.com/open-banking/v2.2/branches",
+			"description": "",
+			"data": null,
+			"dataMode": null,
+			"headerData": [],
+			"method": "GET",
+			"pathVariableData": [],
+			"queryParams": [],
+			"auth": null,
+			"events": [],
+			"folder": null,
+			"responses": [
+				{
+					"id": "727db3d1-0a26-4199-8dc3-56a3bdde4bcc",
+					"name": "Example Request",
+					"status": null,
+					"mime": null,
+					"language": "json",
+					"text": "{\n  \"meta\": {\n    \"LastUpdated\": \"2019-08-15T23:50:57.750Z\",\n    \"TotalResults\": 665,\n    \"Agreement\": \"Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions\",\n    \"License\": \"https://www.openbanking.org.uk/open-licence\",\n    \"TermsOfUse\": \"https://www.openbanking.org.uk/terms\"\n  },\n  \"data\": [\n    {\n      \"Brand\": [\n        {\n          \"BrandName\": \"Red Bank\",\n          \"Branch\": [\n            {\n              \"Identification\": \"1\",\n              \"SequenceNumber\": \"0\",\n              \"Name\": \"New York\",\n              \"Type\": \"Physical\",\n              \"SortCode\": [\n                \"12345\"\n              ],\n              \"CustomerSegment\": [\n                \"Business\",\n                \"Corporate\",\n                \"Personal\",\n                \"Premier\",\n                \"Private\",\n                \"Select\",\n                \"SME\",\n                \"Wealth\"\n              ],\n              \"ServiceAndFacility\": [\n                \"ExternalATM\",\n                \"InternalATM\",\n                \"VideoBanking\",\n                \"CounterServices\",\n                \"PremierCounter\",\n                \"WiFi\"\n              ],\n              \"Accessibility\": [\n                \"WheelchairAccess\",\n                \"AudioCashMachine\"\n              ],\n              \"Note\": \"Counter closes 17:00 daily. No counter service Saturday. Self service machines, internet banking, counter service and interview rooms available. This branch will be closed on the 6th May for Early May Bank Holiday\",\n              \"Availability\": {\n                \"StandardAvailability\": {\n                  \"Day\": [\n                    {\n                      \"Name\": \"Monday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"09:00\",\n                          \"ClosingTime\": \"17:00\"\n                        }\n                      ]\n                    },\n                    {\n                      \"Name\": \"Tuesday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"09:30\",\n                          \"ClosingTime\": \"17:00\"\n                        }\n                      ]\n                    },\n                    {\n                      \"Name\": \"Wednesday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"09:00\",\n                          \"ClosingTime\": \"17:00\"\n                        }\n                      ]\n                    },\n                    {\n                      \"Name\": \"Thursday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"09:00\",\n                          \"ClosingTime\": \"17:00\"\n                        }\n                      ]\n                    },\n                    {\n                      \"Name\": \"Friday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"09:00\",\n                          \"ClosingTime\": \"17:00\"\n                        }\n                      ]\n                    },\n                    {\n                      \"Name\": \"Saturday\",z\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"09:00\",\n                          \"ClosingTime\": \"14:00\"\n                        }\n                      ]\n                    },\n                    {\n                      \"Name\": \"Sunday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"00:00\",\n                          \"ClosingTime\": \"00:00\"\n                        }\n                      ]\n                    }\n                  ]\n                }\n              },\n              \"ContactInfo\": [\n                {\n                  \"ContactContent\": \"+1-123-123-1234\",\n                  \"ContactType\": \"Phone\"\n                }\n              ],\n              \"PostalAddress\": {\n                \"BuildingNumber\": \"123\",\n                \"StreetName\": \"Street Name\",\n                \"TownName\": \"New York\",\n                \"Country\": \"USA\",\n                \"PostCode\": \"12345\",\n                \"GeoLocation\": {\n                  \"GeographicCoordinates\": {\n                    \"Latitude\": \"0\",\n                    \"Longitude\": \"0\"\n                  }\n                }\n              }\n            },\n            {\n              \"Identification\": \"2\",\n              \"SequenceNumber\": \"0\",\n              \"Name\": \"Dallas\",\n              \"Type\": \"Physical\",\n              \"SortCode\": [\n                \"12345\"\n              ],\n              \"CustomerSegment\": [\n                \"Business\",\n                \"Corporate\",\n                \"Personal\",\n                \"Premier\",\n                \"Private\",\n                \"Select\",\n                \"SME\",\n                \"Wealth\"\n              ],\n              \"ServiceAndFacility\": [\n                \"ExternalATM\",\n                \"CounterServices\",\n                \"PremierCounter\",\n                \"WiFi\"\n              ],\n              \"Accessibility\": [\n                \"WheelchairAccess\",\n                \"AudioCashMachine\"\n              ],\n              \"Note\": \"Counter service, self service machines, internet banking and interview rooms available. This branch will be closed on the 6th May for Early May Bank Holiday\",\n              \"Availability\": {\n                \"StandardAvailability\": {\n                  \"Day\": [\n                    {\n                      \"Name\": \"Monday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"09:30\",\n                          \"ClosingTime\": \"16:30\"\n                        }\n                      ]\n                    },\n                    {\n                      \"Name\": \"Tuesday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"09:30\",\n                          \"ClosingTime\": \"16:30\"\n                        }\n                      ]\n                    },\n                    {\n                      \"Name\": \"Wednesday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"09:30\",\n                          \"ClosingTime\": \"16:30\"\n                        }\n                      ]\n                    },\n                    {\n                      \"Name\": \"Thursday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"09:30\",\n                          \"ClosingTime\": \"16:30\"\n                        }\n                      ]\n                    },\n                    {\n                      \"Name\": \"Friday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"09:30\",\n                          \"ClosingTime\": \"16:30\"\n                        }\n                      ]\n                    },\n                    {\n                      \"Name\": \"Saturday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"00:00\",\n                          \"ClosingTime\": \"00:00\"\n                        }\n                      ]\n                    },\n                    {\n                      \"Name\": \"Sunday\",\n                      \"OpeningHours\": [\n                        {\n                          \"OpeningTime\": \"00:00\",\n                          \"ClosingTime\": \"00:00\"\n                        }\n                      ]\n                    }\n                  ]\n                }\n              },\n              \"ContactInfo\": [\n                {\n                  \"ContactContent\": \"+1-123-123-1234\",\n                  \"ContactType\": \"Phone\"\n                }\n              ],\n              \"PostalAddress\": {\n                \"BuildingNumber\": \"123\",\n                \"StreetName\": \"Street Name\",\n                \"TownName\": \"Dallas\",\n                \"Country\": \"USA\",\n                \"PostCode\": \"12345\",\n                \"GeoLocation\": {\n                  \"GeographicCoordinates\": {\n                    \"Latitude\": \"0\",\n                    \"Longitude\": \"0\"\n                  }\n                }\n              }\n            }            }\n          ]\n        }\n      ]\n    }\n  ]\n}",
+					"responseCode": {
+						"code": 200,
+						"name": "OK"
+					},
+					"requestObject": {
+						"data": null,
+						"dataMode": null,
+						"headerData": [],
+						"method": "GET",
+						"pathVariableData": [],
+						"queryParams": [],
+						"url": "https://api.hsbc.com/open-banking/v2.2/branches"
+					},
+					"headers": [
+						{
+							"key": "Content-Type",
+							"value": "application/prs.openbanking.opendata.v2.2+json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1186821"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Fri, 16 Aug 2019 15:19:29 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "3cbdeeb4-c039-11e9-8523-2532b8006b32"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Thu, 15 Aug 2019 23:50:57 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.hsbc.com"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "ehRr8GwFDoEFVYQ="
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=28800"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "ETag",
+							"value": "\"121c05-sdSQJxPbLLq3qhzan6r3KF1pmX8\""
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-5d56c97f-ba94b370e4f55efe5c365510;Sampled=0"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 097fbf718c1b805deaed8941b59761cc.cloudfront.net (CloudFront), 1.1 4eb6db543899d63048055031c3411b01.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "IAD79-C2"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "ATL51-C1"
+						},
+						{
+							"key": "Age",
+							"value": "4249"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Hit from cloudfront"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "QQhZXm8EDGLWRFXlWUxblVyXmnA8cw2GkJNlneHCpbK5FsGq0W5HHQ=="
+						}
+					],
+					"cookies": null,
+					"request": "4bfd0a11-22ac-41a1-9f93-1c624059b471",
+					"collection": "13797abe-f069-48de-881b-90b25d886bff"
+				}
+			],
+			"headers": "",
+			"pathVariables": {}
+		}
+	]
+}
