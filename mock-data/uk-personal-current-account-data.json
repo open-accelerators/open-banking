@@ -1,0 +1,820 @@
+{
+  "meta": {
+    "LastUpdated": "2019-04-08T08:52:59.431Z",
+    "TotalResults": 2,
+    "Agreement": "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions",
+    "License": "https://www.openbanking.org.uk/open-licence",
+    "TermsOfUse": "https://www.openbanking.org.uk/terms"
+  },
+  "data": [
+    {
+      "Brand": [
+        {
+          "BrandName": "Red Hat",
+          "PCA": [
+            {
+              "Name": "Standard Account",
+              "Identification": "Standard",
+              "Segment": [
+                "Premium"
+              ],
+              "OnSaleIndicator": true,
+              "PCAMarketingState": [
+                {
+                  "Identification": "R1",
+                  "MarketingState": "Regular",
+                  "Overdraft": {
+                    "Notes": [
+                      "Oualification is 500"
+                    ],
+                    "OverdraftTierBandSet": [
+                      {
+                        "TierBandMethod": "Tiered",
+                        "Identification": "1",
+                        "AuthorisedIndicator": true,
+                        "OverdraftTierBand": [
+                          {
+                            "Identification": "1",
+                            "TierValueMin": "0",
+                            "TierValueMax": "500.00",
+                            "OverdraftInterestChargingCoverage": "Tiered",
+                            "EAR": "0.00",
+                            "Notes": [
+                              "Up to £500 - 0% EAR Variable"
+                            ]
+                          },
+                          {
+                            "Identification": "2",
+                            "TierValueMin": "500.00",
+                            "OverdraftInterestChargingCoverage": "Tiered",
+                            "EAR": "9.9",
+                            "Notes": [
+                              "Over £500 - 9.9% EAR Variable"
+                            ]
+                          }
+                        ]
+                      },
+                      {
+                        "TierBandMethod": "Tiered",
+                        "Identification": "1",
+                        "AuthorisedIndicator": false,
+                        "OverdraftTierBand": [
+                          {
+                            "Identification": "1",
+                            "TierValueMin": "0",
+                            "TierValueMax": "500.00",
+                            "EAR": "0.00",
+                            "Notes": [
+                              "Unarranged Overdaft Interest Rate Up to £500 - 0% EAR Variable"
+                            ]
+                          },
+                          {
+                            "Identification": "2",
+                            "TierValueMin": "500.00",
+                            "EAR": "9.9",
+                            "Notes": [
+                              "Over £500 - 9.9% EAR Variable"
+                            ]
+                          }
+                        ],
+                        "OverdraftFeesCharges": [
+                          {
+                            "OverdraftFeeChargeCap": [
+                              {
+                                "FeeType": [
+                                  "UnauthorisedBorrowing"
+                                ],
+                                "MinMaxType": "Maximum",
+                                "FeeCapAmount": "2000.00",
+                                "CappingPeriod": "Month",
+                                "Notes": [
+                                  "We won't charge you more then £2000 in unnaranged Overdraft Interest."
+                                ]
+                              }
+                            ],
+                            "OverdraftFeeChargeDetail": [
+                              {
+                                "FeeType": "UnauthorisedBorrowing",
+                                "FeeRate": "9.9",
+                                "ApplicationFrequency": "Monthly",
+                                "CalculationFrequency": "Daily",
+                                "Notes": [
+                                  "9.9% EAR variable to a monthly maximum of £2000 on the unarranged overdraft."
+                                ]
+                              }
+                            ]
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "Eligibility": {
+                    "OtherEligibility": [
+                      {
+                        "Name": "Total Relationship Balance",
+                        "Description": "is available to you, if you pay your annual income into your Bank Account and have a Total Relationship Balance (TRB) of £500,000. TRB includes, savings, current accounts and investments balances. ",
+                        "Type": "Other",
+                        "Amount": "500000.00",
+                        "Indicator": false
+                      },
+                      {
+                        "Name": "Other",
+                        "Description": "For eligibility purposes, please note:  in the UK excludes M&S Bank, first direct and  Expat. In the case of joint accounts, as long as the combined balance between the joint parties equates to £500,000 both parties could qualify for  . ",
+                        "Type": "Other"
+                      }
+                    ],
+                    "AgeEligibility": {
+                      "MinimumAge": 18
+                    },
+                    "CreditCheck": {
+                      "ScoringType": "Soft",
+                      "Notes": [
+                        "If you are resident in the UK, you are happy for us to undertake a credit register search. In order to qualify for lending, savings and travel insurance benefits and preferential rates you will need to be a UK resident. This is subject to status and meeting 's proof of UK address requirement."
+                      ]
+                    },
+                    "IDVerificationCheck": {
+                      "URL": "https://www.product.com/id",
+                      "Notes": [
+                        "is only available in the following countries: UK, France, Hong Kong, China, Singapore, Canada, USA. Eligibility and the ID & verification process may differ in each country. Should you wish to have in multiple countries you must qualify independently in that particular country.   "
+                      ]
+                    }
+                  },
+                  "FeaturesAndBenefits": {
+                    "FeatureBenefitItem": [
+                      {
+                        "Identification": "1",
+                        "Type": "RelationshipManager",
+                        "Name": "Relationship management services",
+                        "Textual": "As an customer, you will have access to a range of relationship management services designed to help you and your family thrive."
+                      },
+                      {
+                        "Identification": "2",
+                        "Type": "PreferentialRates",
+                        "Name": "Regular Saver",
+                        "Textual": "You'll get a fixed rate of 5% AER/gross if you're an customer (providing you keep the account for the period you hold a Regular Saver with us).",
+                        "FeatureBenefitEligibility": [
+                          {
+                            "Name": "Minimum Deposit",
+                            "Description": "You can choose to set up a standing order to pay between £25 and £250 into your Regular Saver Account each month, up to a total of £3,000. (If your regular payments are less than £250, you can carry your allowance over and pay more in later months.)",
+                            "Type": "MinimumDeposit",
+                            "Amount": "25.00",
+                            "Textual": "With Regular Saver, you save money over a 12-month fixed period. Partial withdrawals are not permitted. If you close your account early, you'll receive interest at our Flexible Saver rate."
+                          }
+                        ]
+                      },
+                      {
+                        "Identification": "3",
+                        "Type": "TravelInsurance",
+                        "Name": " Worldwide Travel Insurance",
+                        "Textual": "As part of your experience, you enjoy the benefit of  Worldwide Travel Insurance at no extra cost. Our cover gives you, your partner and any dependent children worldwide protection, so we're here to help whether you've booked a long weekend in the UK, skiing in the Alps or travelling overseas.",
+                        "FeatureBenefitEligibility": [
+                          {
+                            "Name": "Other Eligibility",
+                            "Description": " Worldwide Travel Insurance is provided by Aviva Insurance Limited. Policy terms and conditions apply.",
+                            "Type": "Other",
+                            "Textual": "Please note: holidays in the UK, Channel Islands and Isle of Man will only be covered if they include two or more consecutive nights stay in pre-booked holiday accommodation."
+                          }
+                        ]
+                      },
+                      {
+                        "Identification": "4",
+                        "Type": "Other",
+                        "Name": " Premier credit cards",
+                        "Textual": "As an customer, you could qualify for a non-fee paying credit card offering different levels of rewards."
+                      },
+                      {
+                        "Identification": "5",
+                        "Type": "AccountManagement",
+                        "Name": "24/7 telephone banking",
+                        "Textual": "Call our 24-hour Direct Relationship Management service any time, day or night."
+                      },
+                      {
+                        "Identification": "6",
+                        "Type": "AccountManagement",
+                        "Name": "Online Banking",
+                        "Textual": "Make payments, pay bills and transfer money quickly, easily and securely online."
+                      },
+                      {
+                        "Identification": "7",
+                        "Type": "AccountManagement",
+                        "Name": "Mobile Banking",
+                        "Textual": "Keep an eye on your account with alerts sent straight to your mobile."
+                      }
+                    ],
+                    "Card": [
+                      {
+                        "Type": "DebitCard",
+                        "Scheme": "Visa",
+                        "ContactlessIndicator": true,
+                        "Notes": [
+                          "Subject to status"
+                        ]
+                      }
+                    ],
+                    "MobileWallet": [
+                      {
+                        "Type": "GooglePay"
+                      },
+                      {
+                        "Type": "ApplePay"
+                      },
+                      {
+                        "Type": "SamsungPay"
+                      },
+                      {
+                        "Type": "MobileBankingApp"
+                      },
+                      {
+                        "Type": "PayM"
+                      }
+                    ]
+                  },
+                  "OtherFeesCharges": {
+                    "FeeChargeDetail": [
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "CHAPSOut",
+                        "FeeAmount": "20.00",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "To  accounts from a  Account which is not a Premier Bank Account (including  ) Branch and Telephone Banking. £20\n"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "CHAPSOutInterBank",
+                        "FeeAmount": "30.00",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "To all other accounts. Branch and Telephone Banking £30."
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "CHAPSOutPost",
+                        "FeeAmount": "30.00",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction"
+                      },
+                      {
+                        "FeeCategory": "International",
+                        "FeeType": "IntlPayTransNonSterling",
+                        "FeeAmount": "0.00",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Sending money outside the UK or in a foreign currency within the UK.  Accounts: Branch and Telephone Banking = £0, Online or Mobile Banking (if available) = £0, Post = £30. Non  Accounts: Branch and Telephone Banking = £9, Online or Mobile Banking (if available) = £4, Post = £30.\n"
+                        ],
+                        "FeeApplicableRange": {
+                          "MinimumAmount": "0.00",
+                          "MaximumAmount": "30.00"
+                        }
+                      },
+                      {
+                        "FeeCategory": "Card",
+                        "FeeType": "IntlPayPurchaseNonSterling",
+                        "FeeRate": "2.75",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransactionAmount",
+                        "Notes": [
+                          "Non-sterling transaction fee: 2.75%"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Card",
+                        "FeeType": "ATMNonSterlingWithdrawal",
+                        "FeeRate": "2.75",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransactionAmount",
+                        "Notes": [
+                          "Non-sterling transaction fee: 2.75%. \n\nOther cash machine providers may charge you to use their cash machines. We calculate the percentage fee on the converted amount of the debit card payment or cash withdrawal in a foreign currency outside the UK.\n"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "International",
+                        "FeeType": "IntlPayForeignPaymentInUKAcc",
+                        "FeeAmount": "8.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Receiving money in a foreign currency (£100 or more) = £8.00. Receiving money from outside the UK in pounds sterling (£100 or more) = £6.00. \n\n£100 or less = £6"
+                        ],
+                        "FeeApplicableRange": {
+                          "MinimumAmount": "6.00",
+                          "MaximumAmount": "8.00"
+                        }
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ChqForeign",
+                        "FeeAmount": "6.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cheques issued by banks outside the UK that we negotiate for you : £100 or less = £6.00. Returned Cheque = £25"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ChqForeign",
+                        "FeeAmount": "12.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cheques issued by banks outside the UK that we negotiate for you : £100.01 to £5,000 = £12.00. Returned Cheque = £25"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ChqForeign",
+                        "FeeAmount": "24.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cheques issued by banks outside the UK that we negotiate for you : £5,000.01 to £10,000 = £24. Returned Cheque = £25"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ChqForeign",
+                        "FeeAmount": "34.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cheques issued by banks outside the UK that we negotiate for you- £10,000.01 to £50,000 = £34.00. Returned Cheque = £25"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ChqForeign",
+                        "FeeAmount": "60.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cheques issued by banks outside the UK that we negotiate for you - £50,000 or more = £60.00. Returned Cheque = £25"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "Other",
+                        "FeeAmount": "28.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cheques issued by banks outside the UK that we collect for you: All amounts = £28.00.  If you want the cheque to be sent by courier = £10.00.  Returned cheque = £28.00"
+                        ],
+                        "FeeApplicableRange": {
+                          "MinimumAmount": "10.00",
+                          "MaximumAmount": "28.00"
+                        }
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ReportStatementFrequent",
+                        "FeeAmount": "1.00",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "For having more than one paper statement a month = £1.00"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ReportStatementCopy1",
+                        "FeeAmount": "1.00",
+                        "ApplicationFrequency": "PerSheet",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Additional copy of your statement: £1 a sheet (maximum charge £10 per request) "
+                        ]
+                      },
+                      {
+                        "FeeCategory": "BankersDrafts",
+                        "FeeType": "DraftsBankers",
+                        "FeeAmount": "20.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction"
+                      },
+                      {
+                        "FeeCategory": "BankersDrafts",
+                        "FeeType": "DraftsCancellation",
+                        "FeeAmount": "10.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction"
+                      },
+                      {
+                        "FeeCategory": "International",
+                        "FeeType": "Other",
+                        "FeeAmount": "100.00",
+                        "ApplicationFrequency": "Other",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "International account opening through the International Banking Centre = £100.00"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Foreign",
+                        "FeeType": "Other",
+                        "FeeAmount": "3.95",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Travel Money - £3.95 on orders less than £250 for home delivery"
+                        ]
+                      }
+                    ]
+                  },
+                  "CoreProduct": {
+                    "ProductURL": "https://product.com",
+                    "TcsAndCsURL": "https://product.com/terms",
+                    "ProductDescription": "In today’s world, your life is full of more responsibilities and more choices to make, as well as more opportunities and more dreams to fulfil. From helping you manage the unexpected surprises life can throw your way to nurturing the prosperity of your family and planning for the future, is designed to help you thrive, all for no monthly fee.",
+                    "SalesAccessChannels": [
+                      "Branch",
+                      "CallCentre"
+                    ],
+                    "ServicingAccessChannels": [
+                      "ATM",
+                      "Branch",
+                      "CallCentre",
+                      "MobileBankingApp",
+                      "Online",
+                      "PostOffice",
+                      "RelationshipManager"
+                    ],
+                    "MonthlyMaximumCharge": "2000.00"
+                  }
+                }
+              ]
+            },
+            {
+              "Name": "Starter",
+              "Identification": "Starter",
+              "Segment": [
+                "General"
+              ],
+              "OnSaleIndicator": true,
+              "PCAMarketingState": [
+                {
+                  "Identification": "R1",
+                  "MarketingState": "Regular",
+                  "Overdraft": {
+                    "Notes": [
+                      "Arranged Overdraft Interest 19.9% EAR Variable. Whether you have an arranged overdraft limit or not you'll be given a £50 'buffer' to help cover short term emergency borrowing. No interest is charged on the buffer amount. So you know where you stand, we won't agree to any payment requests that would take you over your arranged overdraft limit and the £50 buffer, and with Bank Account Pay Monthly we won't charge you any overdraft fees."
+                    ],
+                    "OverdraftTierBandSet": [
+                      {
+                        "TierBandMethod": "Tiered",
+                        "Identification": "1",
+                        "AuthorisedIndicator": true,
+                        "BufferAmount": "50.00",
+                        "Notes": [
+                          "Whether you have an arranged overdraft limit or not you'll be given a £50 'buffer' to help cover short term emergency borrowing. No interest is charged on the buffer amount. So you know where you stand, we won't agree to any payment requests that would take you over your arranged overdraft limit and the £50 buffer, and with Bank Account Pay Monthly we won't charge you any overdraft fees. "
+                        ],
+                        "OverdraftTierBand": [
+                          {
+                            "Identification": "1",
+                            "TierValueMin": "0.00",
+                            "OverdraftInterestChargingCoverage": "Tiered",
+                            "EAR": "19.9"
+                          }
+                        ]
+                      }
+                    ]
+                  },
+                  "Eligibility": {
+                    "OtherEligibility": [
+                      {
+                        "Name": "Monthly Deposit Income/Turnover",
+                        "Description": "You will need to pay at least £500 per month (or £3,000 over 6 months) into this account (Should you fail to maintain this level, we will either change it to a Current Account or give you notice that we will be closing your account. If you are under the age of 24, the qualification criteria will not apply.)",
+                        "Type": "MinimumDeposit",
+                        "Amount": "500.00"
+                      }
+                    ],
+                    "AgeEligibility": {
+                      "MinimumAge": 18
+                    },
+                    "ResidencyEligibility": {
+                      "ResidencyIncluded": [
+                        "ELEN",
+                        "ELNI",
+                        "ELSC",
+                        "ELUK",
+                        "ELWA"
+                      ]
+                    },
+                    "CreditCheck": {
+                      "ScoringType": "Hard",
+                      "Notes": [
+                        "If you are resident in the UK, you are happy for us to undertake a credit register search"
+                      ]
+                    },
+                    "IDVerificationCheck": {
+                      "URL": "https://product.com/id",
+                      "Notes": [
+                        "You will need to provide us with identification and proof of your address and one month's bank statements from your current bank"
+                      ]
+                    }
+                  },
+                  "FeaturesAndBenefits": {
+                    "FeatureBenefitItem": [
+                      {
+                        "Identification": "1",
+                        "Type": "OverdraftControl",
+                        "Name": "Overdraft Buffer",
+                        "Amount": "50.00",
+                        "Textual": "Whether you have a formal overdraft limit or not you'll be given a £50 'buffer' to help cover short term emergency borrowing. So you know where you stand, we won't agree to any payment requests that would take you over your formal overdraft limit and the £50 buffer, and with Bank Account Pay Monthly we won't charge you any overdraft fees. Representative Example: 19.9% EAR variable (assumed overdraft £1,200)."
+                      },
+                      {
+                        "Identification": "2",
+                        "Type": "Other",
+                        "Name": "Regular Saver",
+                        "Textual": "Bank Account Pay Monthly customers can enjoy a 3% AER/gross fixed rate for 12 months with our Regular Saver. Interest is calculated on the daily cleared balance and paid on the anniversary of account opening. ",
+                        "FeatureBenefitEligibility": [
+                          {
+                            "Name": "Minimum Deposit",
+                            "Type": "MinimumDeposit",
+                            "Amount": "25.00",
+                            "Textual": "You can save from as little as £25 up to a maximum of £250 a month and a maximum of £3000 by month 12. If you save less than £250 in any given month, you can carry over any unused subscription to the following months.",
+                            "Period": "Month"
+                          }
+                        ]
+                      }
+                    ],
+                    "Card": [
+                      {
+                        "Type": "DebitCard",
+                        "Scheme": "Visa",
+                        "ContactlessIndicator": true,
+                        "Notes": [
+                          "Subject to status"
+                        ]
+                      }
+                    ],
+                    "MobileWallet": [
+                      {
+                        "Type": "GooglePay"
+                      },
+                      {
+                        "Type": "ApplePay"
+                      },
+                      {
+                        "Type": "SamsungPay"
+                      },
+                      {
+                        "Type": "MobileBankingApp"
+                      },
+                      {
+                        "Type": "PayM"
+                      }
+                    ]
+                  },
+                  "OtherFeesCharges": {
+                    "FeeChargeDetail": [
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "CHAPSOut",
+                        "FeeAmount": "20.00",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "To  accounts from a  Account which is not a Premier Bank Account (including  ) Branch and Telephone Banking. £20\n"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "CHAPSOutInterBank",
+                        "FeeAmount": "30.00",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "To all other accounts. Branch and Telephone Banking £30."
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "CHAPSOutPost",
+                        "FeeAmount": "30.00",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction"
+                      },
+                      {
+                        "FeeCategory": "International",
+                        "FeeType": "IntlPayTransNonSterling",
+                        "FeeAmount": "0.00",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Sending money outside the UK or in a foreign currency within the UK.  Accounts: Branch and Telephone Banking = £0, Online or\nMobile Banking (if available) = £0, Post = £30. Non  Accounts: Branch and Telephone Banking = £9, Online or Mobile Banking (if available) = £4, Post = £30.\n"
+                        ],
+                        "FeeApplicableRange": {
+                          "MinimumAmount": "0.00",
+                          "MaximumAmount": "30.00"
+                        }
+                      },
+                      {
+                        "FeeCategory": "Card",
+                        "FeeType": "IntlPayPurchaseNonSterling",
+                        "FeeRate": "2.75",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransactionAmount",
+                        "Notes": [
+                          "Non-sterling transaction fee: 2.75%"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Card",
+                        "FeeType": "ATMNonSterlingWithdrawal",
+                        "FeeRate": "2.75",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransactionAmount",
+                        "Notes": [
+                          "Non-sterling transaction fee: 2.75%. plus a fee of 2% (Minimum: £1.75, Maximum: £5)\n\nOther cash machine providers may charge you to use their cash machines. We calculate the percentage fee on the converted amount of the debit card payment or cash withdrawal in a foreign currency outside the UK.\n"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "International",
+                        "FeeType": "IntlPayForeignPaymentInUKAcc",
+                        "FeeAmount": "8.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Receiving money in a foreign currency (£100 or more) = £8.00. Receiving money from outside the UK in pounds sterling (£100 or more) = £6.00. \n\n£100 or less = £6\n"
+                        ],
+                        "FeeApplicableRange": {
+                          "MinimumAmount": "6.00",
+                          "MaximumAmount": "8.00"
+                        }
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ChqForeign",
+                        "FeeAmount": "6.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cheques issued by banks outside the UK that we negotiate\nfor you : £100 or less = £6.00. Returned Cheque = £25"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ChqForeign",
+                        "FeeAmount": "12.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cheques issued by banks outside the UK that we negotiate\nfor you : £100.01 to £5,000 = £12.00. Returned Cheque = £25"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ChqForeign",
+                        "FeeAmount": "24.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cheques issued by banks outside the UK that we negotiate\nfor you : £5,000.01 to £10,000 = £24. Returned Cheque = £25"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ChqForeign",
+                        "FeeAmount": "34.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cheques issued by banks outside the UK that we negotiate\nfor you: - £10,000.01 to £50,000 = £34.00. Returned Cheque = £25"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ChqForeign",
+                        "FeeAmount": "60.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cheques issued by banks outside the UK that we negotiate\nfor you: £50,000 or more = £60.00. Returned Cheque = £25"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "Other",
+                        "FeeAmount": "28.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cheques issued by banks outside the UK that we collect for you: All amounts = £28.00.  If you want the cheque to be sent by courier = £10.00.  Returned cheque = £28.00"
+                        ],
+                        "FeeApplicableRange": {
+                          "MinimumAmount": "10.00",
+                          "MaximumAmount": "28.00"
+                        }
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ReportStatementFrequent",
+                        "FeeAmount": "0.00",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "For having more than one paper statement a month"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "ReportStatementCopy1",
+                        "FeeAmount": "0.00",
+                        "ApplicationFrequency": "PerSheet",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Additional copy of your statement: \n"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "BankersDrafts",
+                        "FeeType": "DraftsBankers",
+                        "FeeAmount": "20.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction"
+                      },
+                      {
+                        "FeeCategory": "BankersDrafts",
+                        "FeeType": "DraftsCancellation",
+                        "FeeAmount": "10.00",
+                        "ApplicationFrequency": "PerItem",
+                        "CalculationFrequency": "PerTransaction"
+                      },
+                      {
+                        "FeeCategory": "Servicing",
+                        "FeeType": "AutoAutomatedEntries",
+                        "FeeAmount": "20.00",
+                        "ApplicationFrequency": "Monthly",
+                        "CalculationFrequency": "Other",
+                        "Notes": [
+                          "Automatic transfer facility between two  accounts in pounds sterling. Sending money daily – £20 per month\nSending money weekly – £8 per month\n"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "International",
+                        "FeeType": "Other",
+                        "FeeAmount": "100.00",
+                        "ApplicationFrequency": "Other",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "International account opening through the International Banking Centre = £100.00"
+                        ]
+                      },
+                      {
+                        "FeeCategory": "Card",
+                        "FeeType": "ATMForeignCashDebCard",
+                        "FeeAmount": "5.00",
+                        "FeeRate": "2.00",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Cash fee: 2% (Minimum: £1.75, Maximum £5)"
+                        ],
+                        "FeeApplicableRange": {
+                          "MinimumAmount": "1.75",
+                          "MaximumAmount": "5.00"
+                        }
+                      },
+                      {
+                        "FeeCategory": "Foreign",
+                        "FeeType": "Other",
+                        "FeeAmount": "3.95",
+                        "ApplicationFrequency": "PerOccurrence",
+                        "CalculationFrequency": "PerTransaction",
+                        "Notes": [
+                          "Travel Money - £3.95 on orders less than £250 for home delivery"
+                        ]
+                      }
+                    ]
+                  },
+                  "CoreProduct": {
+                    "ProductURL": "https://product.com",
+                    "TcsAndCsURL": "https://www.product.com/terms",
+                    "ProductDescription": "A bundle of banking services to help you keep an eye on your money, available for a fee of £10 a month.",
+                    "SalesAccessChannels": [
+                      "Branch"
+                    ],
+                    "ServicingAccessChannels": [
+                      "ATM",
+                      "Branch",
+                      "CallCentre",
+                      "MobileBankingApp",
+                      "Online",
+                      "PostOffice"
+                    ],
+                    "MonthlyMaximumCharge": "0.00"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}
