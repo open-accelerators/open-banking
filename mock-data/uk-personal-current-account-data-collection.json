@@ -11,7 +11,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "",
+				"url": "/personal-current-accounts",
 				"description": "This request fetches the daa"
 			},
 			"response": [
@@ -20,7 +20,7 @@
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"url": "https://api.hsbc.com/open-banking/v2.2/personal-current-accounts"
+						"url": "/personal-current-accounts"
 					},
 					"status": "OK",
 					"code": 200,
