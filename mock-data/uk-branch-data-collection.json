@@ -1,62 +1,453 @@
 {
-	"info": {
-		"_postman_id": "6089aa41-ff19-4492-a25e-ab3012812889",
-		"name": "Branch Data Collection",
-		"description": "version=1 This is branch data collection",
-		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
-	},
-	"item": [
-		{
-			"name": "Branch Data",
-			"request": {
-				"method": "GET",
-				"header": [],
-				"url": "https://open-banking.redhat.com/branches",
-				"description": "This is item is used to fetch branch data"
-			},
-			"response": [
-				{
-					"name": "Response",
-					"originalRequest": {
-						"method": "GET",
-						"header": [],
-						"url": "https://open-banking.redhat.com/branches"
-					},
-					"status": "OK",
-					"code": 200,
-					"_postman_previewlanguage": "json",
-					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/prs.openbanking.opendata.v2.2+json"
-						}
-					],
-					"cookie": [],
-					"body": "{\n    \"meta\": {\n        \"LastUpdated\": \"2019-08-15T23:50:57.750Z\",\n        \"TotalResults\": 3,\n        \"Agreement\": \"Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions\",\n        \"License\": \"https://www.openbanking.org.uk/open-licence\",\n        \"TermsOfUse\": \"https://www.openbanking.org.uk/terms\"\n    },\n    \"data\": [\n        {\n            \"Brand\": [\n                {\n                    \"BrandName\": \"Red Hat Bank\",\n                    \"Branch\": [\n                        {\n                            \"Identification\": \"1\",\n                            \"SequenceNumber\": \"0\",\n                            \"Name\": \"London 1\",\n                            \"Type\": \"Physical\",\n                            \"SortCode\": [\n                                \"11-11-11\"\n                            ],\n                            \"CustomerSegment\": [\n                                \"Business\",\n                                \"Corporate\",\n                                \"Personal\"\n                            ],\n                            \"ServiceAndFacility\": [\n                                \"ExternalATM\",\n                                \"InternalATM\",\n                                \"VideoBanking\",\n                                \"CounterServices\",\n                                \"WiFi\"\n                            ],\n                            \"Accessibility\": [\n                                \"WheelchairAccess\",\n                                \"AudioCashMachine\"\n                            ],\n                            \"Note\": \"This branch will be closed during the holidays\",\n                            \"Availability\": {\n                                \"StandardAvailability\": {\n                                    \"Day\": [\n                                        {\n                                            \"Name\": \"Monday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Tuesday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:30\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Wednesday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Thursday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Friday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Saturday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"14:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Sunday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"00:00\",\n                                                    \"ClosingTime\": \"00:00\"\n                                                }\n                                            ]\n                                        }\n                                    ]\n                                }\n                            },\n                            \"ContactInfo\": [\n                                {\n                                    \"ContactContent\": \"+44-12345-123-123\",\n                                    \"ContactType\": \"Phone\"\n                                }\n                            ],\n                            \"PostalAddress\": {\n                                \"BuildingNumber\": \"123\",\n                                \"StreetName\": \"High Street\",\n                                \"TownName\": \"London\",\n                                \"Country\": \"GB\",\n                                \"PostCode\": \"123 123\",\n                                \"GeoLocation\": {\n                                    \"GeographicCoordinates\": {\n                                        \"Latitude\": \"00.00\",\n                                        \"Longitude\": \"00.00\"\n                                    }\n                                }\n                            }\n                        },\n                        {\n                            \"Identification\": \"2\",\n                            \"SequenceNumber\": \"0\",\n                            \"Name\": \"London 2\",\n                            \"Type\": \"Physical\",\n                            \"SortCode\": [\n                                \"11-11-11\"\n                            ],\n                            \"CustomerSegment\": [\n                                \"Business\",\n                                \"Corporate\",\n                                \"Personal\"\n                            ],\n                            \"ServiceAndFacility\": [\n                                \"ExternalATM\",\n                                \"InternalATM\",\n                                \"VideoBanking\",\n                                \"CounterServices\",\n                                \"WiFi\"\n                            ],\n                            \"Accessibility\": [\n                                \"WheelchairAccess\",\n                                \"AudioCashMachine\"\n                            ],\n                            \"Note\": \"This branch will be closed during the holidays\",\n                            \"Availability\": {\n                                \"StandardAvailability\": {\n                                    \"Day\": [\n                                        {\n                                            \"Name\": \"Monday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Tuesday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:30\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Wednesday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Thursday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Friday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Saturday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"14:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Sunday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"00:00\",\n                                                    \"ClosingTime\": \"00:00\"\n                                                }\n                                            ]\n                                        }\n                                    ]\n                                }\n                            },\n                            \"ContactInfo\": [\n                                {\n                                    \"ContactContent\": \"+44-12345-123-123\",\n                                    \"ContactType\": \"Phone\"\n                                }\n                            ],\n                            \"PostalAddress\": {\n                                \"BuildingNumber\": \"123\",\n                                \"StreetName\": \"High Street\",\n                                \"TownName\": \"London\",\n                                \"Country\": \"GB\",\n                                \"PostCode\": \"123 123\",\n                                \"GeoLocation\": {\n                                    \"GeographicCoordinates\": {\n                                        \"Latitude\": \"00.00\",\n                                        \"Longitude\": \"00.00\"\n                                    }\n                                }\n                            }\n                        },\n                        {\n                            \"Identification\": \"3\",\n                            \"SequenceNumber\": \"0\",\n                            \"Name\": \"London 3\",\n                            \"Type\": \"Physical\",\n                            \"SortCode\": [\n                                \"11-11-11\"\n                            ],\n                            \"CustomerSegment\": [\n                                \"Business\",\n                                \"Corporate\",\n                                \"Personal\"\n                            ],\n                            \"ServiceAndFacility\": [\n                                \"ExternalATM\",\n                                \"InternalATM\",\n                                \"VideoBanking\",\n                                \"CounterServices\",\n                                \"WiFi\"\n                            ],\n                            \"Accessibility\": [\n                                \"WheelchairAccess\",\n                                \"AudioCashMachine\"\n                            ],\n                            \"Note\": \"This branch will be closed during the holidays\",\n                            \"Availability\": {\n                                \"StandardAvailability\": {\n                                    \"Day\": [\n                                        {\n                                            \"Name\": \"Monday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Tuesday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:30\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Wednesday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Thursday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Friday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"17:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Saturday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"09:00\",\n                                                    \"ClosingTime\": \"14:00\"\n                                                }\n                                            ]\n                                        },\n                                        {\n                                            \"Name\": \"Sunday\",\n                                            \"OpeningHours\": [\n                                                {\n                                                    \"OpeningTime\": \"00:00\",\n                                                    \"ClosingTime\": \"00:00\"\n                                                }\n                                            ]\n                                        }\n                                    ]\n                                }\n                            },\n                            \"ContactInfo\": [\n                                {\n                                    \"ContactContent\": \"+44-12345-123-123\",\n                                    \"ContactType\": \"Phone\"\n                                }\n                            ],\n                            \"PostalAddress\": {\n                                \"BuildingNumber\": \"123\",\n                                \"StreetName\": \"High Street\",\n                                \"TownName\": \"London\",\n                                \"Country\": \"GB\",\n                                \"PostCode\": \"123 123\",\n                                \"GeoLocation\": {\n                                    \"GeographicCoordinates\": {\n                                        \"Latitude\": \"00.00\",\n                                        \"Longitude\": \"00.00\"\n                                    }\n                                }\n                            }                     \n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}"
-				}
-			]
-		}
-	],
-	"event": [
-		{
-			"listen": "prerequest",
-			"script": {
-				"id": "f6d9db5c-7db1-440d-9bfc-8bf740b4b204",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		},
-		{
-			"listen": "test",
-			"script": {
-				"id": "ca28b2af-652c-4f26-bf83-c1d80d722795",
-				"type": "text/javascript",
-				"exec": [
-					""
-				]
-			}
-		}
-	]
+  "info": {
+    "_postman_id": "6089aa41-ff19-4492-a25e-ab3012812889",
+    "name": "Branch Data Collection",
+    "description": "version=1 This is branch data collection",
+    "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+  },
+  "item": [
+    {
+      "name": "Get Branch Data",
+      "request": {
+        "method": "GET",
+        "header": [],
+        "url": "https://open-banking.redhat.com/branches",
+        "description": "This is item is used to fetch branch data"
+      },
+      "response": [
+        {
+          "name": "Get Response",
+          "originalRequest": {
+            "method": "GET",
+            "header": [],
+            "url": "https://open-banking.redhat.com/branches"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/prs.openbanking.opendata.v2.2+json"
+            }
+          ],
+          "cookie": [],
+          "body": {
+            "meta": {
+              "LastUpdated": "2019-08-15T23:50:57.750Z",
+              "TotalResults": 3,
+              "Agreement": "Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions",
+              "License": "https://www.openbanking.org.uk/open-licence",
+              "TermsOfUse": "https://www.openbanking.org.uk/terms"
+            },
+            "data": [
+              {
+                "Brand": [
+                  {
+                    "BrandName": "Red Hat Bank",
+                    "Branch": [
+                      {
+                        "Identification": "1",
+                        "SequenceNumber": "0",
+                        "Name": "London 1",
+                        "Type": "Physical",
+                        "SortCode": [
+                          "11-11-11"
+                        ],
+                        "CustomerSegment": [
+                          "Business",
+                          "Corporate",
+                          "Personal"
+                        ],
+                        "ServiceAndFacility": [
+                          "ExternalATM",
+                          "InternalATM",
+                          "VideoBanking",
+                          "CounterServices",
+                          "WiFi"
+                        ],
+                        "Accessibility": [
+                          "WheelchairAccess",
+                          "AudioCashMachine"
+                        ],
+                        "Note": "This branch will be closed during the holidays",
+                        "Availability": {
+                          "StandardAvailability": {
+                            "Day": [
+                              {
+                                "Name": "Monday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Tuesday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:30",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Wednesday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Thursday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Friday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Saturday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "14:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Sunday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "00:00",
+                                    "ClosingTime": "00:00"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "ContactInfo": [
+                          {
+                            "ContactContent": "+44-12345-123-123",
+                            "ContactType": "Phone"
+                          }
+                        ],
+                        "PostalAddress": {
+                          "BuildingNumber": "123",
+                          "StreetName": "High Street",
+                          "TownName": "London",
+                          "Country": "GB",
+                          "PostCode": "123 123",
+                          "GeoLocation": {
+                            "GeographicCoordinates": {
+                              "Latitude": "00.00",
+                              "Longitude": "00.00"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "Identification": "2",
+                        "SequenceNumber": "0",
+                        "Name": "London 2",
+                        "Type": "Physical",
+                        "SortCode": [
+                          "11-11-11"
+                        ],
+                        "CustomerSegment": [
+                          "Business",
+                          "Corporate",
+                          "Personal"
+                        ],
+                        "ServiceAndFacility": [
+                          "ExternalATM",
+                          "InternalATM",
+                          "VideoBanking",
+                          "CounterServices",
+                          "WiFi"
+                        ],
+                        "Accessibility": [
+                          "WheelchairAccess",
+                          "AudioCashMachine"
+                        ],
+                        "Note": "This branch will be closed during the holidays",
+                        "Availability": {
+                          "StandardAvailability": {
+                            "Day": [
+                              {
+                                "Name": "Monday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Tuesday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:30",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Wednesday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Thursday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Friday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Saturday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "14:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Sunday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "00:00",
+                                    "ClosingTime": "00:00"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "ContactInfo": [
+                          {
+                            "ContactContent": "+44-12345-123-123",
+                            "ContactType": "Phone"
+                          }
+                        ],
+                        "PostalAddress": {
+                          "BuildingNumber": "123",
+                          "StreetName": "High Street",
+                          "TownName": "London",
+                          "Country": "GB",
+                          "PostCode": "123 123",
+                          "GeoLocation": {
+                            "GeographicCoordinates": {
+                              "Latitude": "00.00",
+                              "Longitude": "00.00"
+                            }
+                          }
+                        }
+                      },
+                      {
+                        "Identification": "3",
+                        "SequenceNumber": "0",
+                        "Name": "London 3",
+                        "Type": "Physical",
+                        "SortCode": [
+                          "11-11-11"
+                        ],
+                        "CustomerSegment": [
+                          "Business",
+                          "Corporate",
+                          "Personal"
+                        ],
+                        "ServiceAndFacility": [
+                          "ExternalATM",
+                          "InternalATM",
+                          "VideoBanking",
+                          "CounterServices",
+                          "WiFi"
+                        ],
+                        "Accessibility": [
+                          "WheelchairAccess",
+                          "AudioCashMachine"
+                        ],
+                        "Note": "This branch will be closed during the holidays",
+                        "Availability": {
+                          "StandardAvailability": {
+                            "Day": [
+                              {
+                                "Name": "Monday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Tuesday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:30",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Wednesday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Thursday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Friday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "17:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Saturday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "09:00",
+                                    "ClosingTime": "14:00"
+                                  }
+                                ]
+                              },
+                              {
+                                "Name": "Sunday",
+                                "OpeningHours": [
+                                  {
+                                    "OpeningTime": "00:00",
+                                    "ClosingTime": "00:00"
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        "ContactInfo": [
+                          {
+                            "ContactContent": "+44-12345-123-123",
+                            "ContactType": "Phone"
+                          }
+                        ],
+                        "PostalAddress": {
+                          "BuildingNumber": "123",
+                          "StreetName": "High Street",
+                          "TownName": "London",
+                          "Country": "GB",
+                          "PostCode": "123 123",
+                          "GeoLocation": {
+                            "GeographicCoordinates": {
+                              "Latitude": "00.00",
+                              "Longitude": "00.00"
+                            }
+                          }
+                        }
+                      }
+                    ]
+                  }
+                ]
+              }
+            ]
+          }
+        }
+      ]
+    },
+    {
+      "name": "Head Branch Data",
+      "request": {
+        "method": "HEAD",
+        "header": [],
+        "url": "https://open-banking.redhat.com/branches",
+        "description": "This is item is used to fetch branch data"
+      },
+      "response": [
+        {
+          "name": "Head Response",
+          "originalRequest": {
+            "method": "HEAD",
+            "header": [],
+            "url": "https://open-banking.redhat.com/branches"
+          },
+          "status": "OK",
+          "code": 200,
+          "_postman_previewlanguage": "json",
+          "header": [
+            {
+              "key": "Content-Type",
+              "value": "application/prs.openbanking.opendata.v2.2+json"
+            }
+          ],
+          "cookie": [],
+          "body": {}
+        }
+      ]
+    }
+  ],
+  "event": [
+    {
+      "listen": "prerequest",
+      "script": {
+        "id": "f6d9db5c-7db1-440d-9bfc-8bf740b4b204",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    },
+    {
+      "listen": "test",
+      "script": {
+        "id": "ca28b2af-652c-4f26-bf83-c1d80d722795",
+        "type": "text/javascript",
+        "exec": [
+          ""
+        ]
+      }
+    }
+  ]
 }
