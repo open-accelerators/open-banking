@@ -1,0 +1,255 @@
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" dir="ltr" prefix="content: http://purl.org/rss/1.0/modules/content/ dc: http://purl.org/dc/terms/ foaf: http://xmlns.com/foaf/0.1/ og: http://ogp.me/ns# rdfs: http://www.w3.org/2000/01/rdf-schema# schema: http://schema.org/ sioc: http://rdfs.org/sioc/ns# sioct: http://rdfs.org/sioc/types# skos: http://www.w3.org/2004/02/skos/core# xsd: http://www.w3.org/2001/XMLSchema#">
+  <head>
+    <title>Open Banking Sandbox| Red Hat Developer</title>
+    <meta charset="utf-8" />
+    <link rel="stylesheet" media="all" href="/css/developers-theme-1.css" type="text/css" />
+    <link rel="stylesheet" media="all" href="/css/developers-theme-2.css" type="text/css" />
+    <link rel="stylesheet" media="all" href="https://static.redhat.com/libs/redhat/redhat-theme/2/advanced-theme.css"  type="text/css" />
+    <link rel="stylesheet" media="all" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/8.9.1/styles/github.min.css" type="text/css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script> 
+    <script src="https://developers.redhat.com/auth/js/keycloak.js"></script>       
+  </head>
+  <body>
+  <script>
+    /**
+        var cloak = Keycloak({
+        "url": "https://developers.redhat.com/auth",
+        "realm": "rhd",
+        "clientId": "rh-open-banking"
+      });
+        cloak.init({ "onLoad": "login-required" }).success(function(authenticated) {
+            console.log(authenticated ? 'authenticated' : 'not authenticated');
+        }).error(function() {
+            console.log('failed to initialize');
+        });
+    **/
+  </script>       
+  <div class="layout-container">
+    <div class="rhd-masthead">
+      <div>
+        <div class="rh-universal-header">
+          <nav class="rh-nav-universal" aria-label="Red Hat Global Navigation">
+            <a class="rh-logo-wrapper" href="https://www.redhat.com/" title="Red Hat Home page">
+            <img class="rh-header-logo" alt="Red Hat Logo" src="https://developers.redhat.com/themes/custom/rhdp/images/branding/RHLogo_white.svg" />
+            </a>
+            <ul class="rhd-menu rh-nav-universal-list">
+              <li class="menu-item rh-nav-universal-link">
+                <a href="https://access.redhat.com/" title="The Red Hat Customer Portal provides comprehensive documentation, tools, security updates, and knowledge to help customers succeed with Red Hat solutions.">Customer Portal</a>
+              </li>
+              <li class="menu-item rh-nav-universal-link">
+                <a href="https://developer.redhat.com/" title="The Red Hat Developer program provides tools, technologies, and community to help developers solve problems, connect with colleagues, discover what’s next, and lead their projects forward.">Developer</a>
+              </li>
+              <li class="menu-item rh-nav-universal-link">
+                <a href="https://che.openshift.io/" title="Eclipse Che is a developer workspace server and cloud IDE built for teams and organizations.">Hosted IDE</a>
+              </li>
+              <li class="menu-item rh-nav-universal-link">
+                <a href="https://www.openshift.com/" title="Red Hat OpenShift, built on Docker and Kubernetes, helps you develop, deploy, and manage your containers.">OpenShift</a>
+              </li>
+              <li class="menu-item rh-nav-universal-link">
+                <a href="https://www.redhat.com/en/partners" title="Connect with Red Hat: Work together to build ideal customer solutions and support the services you provide with our products.">Partners</a>
+              </li>
+              <li class="menu-item rh-nav-universal-link">
+                <a href="https://www.redhat.com/en/store" title="The Red Hat Store lets you easily configure and buy select Red Hat products and services in our online store―without having to talk to anyone.">Store</a>
+              </li>
+            </ul>
+            <ul class="rhd-menu rh-universal-login">
+              {% if current_user %}
+              <li class="logged-in" style="">
+                <a class="dropdown-trigger" href="#">
+                <span class="logged-in-name">{{current_user.email }}</span>
+                </a>
+                <ul class="dropdwn-menu rh-user-menu" style="width: 133.219px; display: none;">
+                  <li class="logged-in dropdwn-item"><a class="account-info" href="https://developers.redhat.com/auth/realms/rhd/account/">Account Info</a></li>
+                  <li class="logged-in dropdwn-item"><a class="logout" href="/logout">Log Out</a></li>
+                </ul>
+              </li>
+              {% else %}
+              <li class="login">
+                <a href="/login"><span class="icon">
+                </span>Log In</a>
+              </li>
+              {% endif %}
+            </ul>
+          </nav>
+        </div>
+        <!-- rh-universal-header -->
+      </div>
+      <div class="container">
+        <div class="rhd-masthead-inner">
+          <div class="rhd-header"></div>
+          <div class="region region-mobile-tray rhd-mobile-tray">
+            <div class="rhd-mobile-tray-inner">
+              <div id="block-rhdsearchblock-mobile" class="block block-redhat-developers block-rhd-search-block">
+                <div class="rhd-search-wrapper"></div>
+              </div>
+            </div>
+          </div>
+          <div class="menu-toggle-wrapper"></div>
+        </div>
+      </div>
+      <!-- container -->
+      <div class="region region-rhd-post-header">
+        <nav role="navigation" class="block block-menu navigation rhd-topic-header menu--topics-menu">
+          <div class="container">
+            {% if current_user %}            
+            <div class="rhd-topic-header-inner">
+              <ul class="rhd-menu rhd-topic-nav slick-initialized slick-slider">
+                <div class="slick-list draggable">
+                  <div class="slick-track" style="opacity: 1; width: 45000px; transform: translate3d(0px, 0px, 0px);">
+                    <li class="menu-item slick-slide slick-current slick-active" aria-hidden="false" tabindex="0">
+                      <a href="/" title="" tabindex="0">Catalogue</a>
+                    </li>
+                    <li class="menu-item slick-slide slick-current slick-active" aria-hidden="false" tabindex="0">
+                      <a href="/learn-more" title="" tabindex="0">Learn More</a>
+                    </li>
+                  </div>
+                </div>
+              </ul>
+            </div> <!-- topic navigation -->
+            {% endif %}
+          </div>
+        </nav>
+      </div>
+      <!-- region -->
+    </div>
+    <!-- masthead -->
+    <div class="layout-content">
+      <div class="container">
+        {% content %}
+      </div>
+    </div>
+    <!-- layout-content -->
+    <footer role="contentinfo">
+      <div class="region region-rhd-footer">
+        <div id="block-rhdfooter" data-block-plugin-id="system_menu_block:rhd-footer" class="rhd-footer">
+          <nav class="rhd-footer-nav" role="navigation">
+            <ul class="rhd-menu">
+              <li class="menu-item menu-item--expanded menu-item--active-trail">
+                <h3 class="section-toggle">Featured Topics</h3>
+                <ul class="rhd-menu">
+                  <li class="menu-item">
+                    <a href="/topics/devops/" title="DevOps involves the combination of cultural change, process automation, and tools to improve your time-to-market.">DevOps</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/topics/kubernetes/" title="Learn how Kubernetes, a powerful open-source tool, helps you manage components across containers in any environment.">Kubernetes</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/topics/linux/" title="Enterprise Linux Tutorials &amp; Training.">Linux</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/topics/microservices/" title="Microservices and microservice architecture is the new standard approach to building applications as independent services.">Microservices</a>
+                  </li>
+                  <li class="menu-item menu-item--active-trail">
+                    <a href="/topics/service-mesh/" title="Istio coordinates microservices on Kubernetes in a service mesh with the powerful monitoring and management tool.">Istio</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/topics/enterprise-java/" title="Java enterprise scale.">Enterprise Java</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/topics/serverless-architecture/" title="Build and deliver functionality with serverless architecture using Back-end as a Service and Function as a Service.">Serverless</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/topics/knative/" title="Kubernetes platform used to build, deploy, and manage serverless workloads.">Knative</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item menu-item--expanded menu-item--active-trail">
+                <h3 class="section-toggle">Quicklinks</h3>
+                <ul class="rhd-menu">
+                  <li class="menu-item">
+                    <a href="/blog/">Blog Articles</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="https://developers.redhat.com/ebooks">Books</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="https://developers.redhat.com/cheatsheets">Cheat Sheets</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="https://developers.redhat.com/search/?s=most-recent&amp;f=type~video">Videos</a>
+                  </li>
+                </ul>
+              </li>
+              <li class="menu-item menu-item--expanded menu-item--active-trail">
+                <h3 class="section-toggle">Communicate</h3>
+                <ul class="rhd-menu">
+                  <li class="menu-item">
+                    <a href="" class="report-an-issue" id="rhdCustomTrigger">Report a website issue</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="https://access.redhat.com/security/team/contact/">Report a security problem</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/about/">About us</a>
+                  </li>
+                  <li class="menu-item">
+                    <a href="/contact-sales/">Contact Sales</a>
+                  </li>
+                </ul>
+              </li>
+            </ul>
+          </nav>
+          <div class="rhd-footer-sidebar">
+            <p class="rhd-footer-sidebar-title">Red Hat Developer</p>
+            <p class="rhd-footer-sidebar-subtitle">Build here. Go anywhere.</p>
+            <p class="rhd-footer-sidebar-content">We serve the builders. The problem solvers who create careers with code.<br />
+              <br />
+              <a href="/register">Join us</a>
+              if you’re a developer, software engineer, web designer, front-end designer, UX designer, computer scientist, architect, tester, product manager, project manager or team lead.
+            </p>
+            <ul class="rhd-footer-sidebar-social">
+              <li>
+                <a href="https://www.youtube.com/channel/UC7noUdfWp-ukXUlAsJnSm-Q" target="_blank" rel="noopener noreferrer">
+                </a>
+              </li>
+              <li>
+                <a href="https://www.facebook.com/RedHatDeveloperProgram" target="_blank" rel="noopener noreferrer">
+                </a>
+              </li>
+              <li>
+                <a href="https://twitter.com/rhdevelopers" target="_blank" rel="noopener noreferrer">
+                </a>
+              </li>
+              <li>
+                <a href="https://github.com/redhat-developer" target="_blank" rel="noopener noreferrer">
+                </a>
+              </li>
+            </ul>
+            <a class="rhd-footer-sidebar-signup" href="/register">Sign me up ▸</a>
+          </div>
+        </div>
+        <div class="rh-universal-footer">
+          <a class="rh-universal-footer-rh-logo" href="https://redhat.com/">
+          <img alt="Red Hat Logo" src="https://developers.redhat.com/themes/custom/rhdp/images/branding/RHLogo_white.svg" />
+          </a>
+          <ul class="rh-universal-footer-legal">
+            <li>
+              <a class="copyright">Copyright © 2019 Red Hat Inc.</a>
+            </li>
+            <ul class="rhd-menu">
+              <li class="menu-item">
+                <a href="https://www.redhat.com/en/about/privacy-policy" title="Red Hat Privacy Policy">Privacy Statement</a>
+              </li>
+              <li class="menu-item">
+                <a href="https://www.redhat.com/en/about/terms-use" title="Red Hat Terms of Use">Terms of Use</a>
+              </li>
+              <li class="menu-item">
+                <a href="https://www.redhat.com/en/about/all-policies-guidelines" title="Red Hat Policies and Guidelines">All policies and guidelines</a>
+              </li>
+            </ul>
+          </ul>
+          <a class="rh-universal-footer-summit-logo" href="https://www.redhat.com/summit/" target="_blank" rel="noopener noreferrer">
+          <img src="https://developer.redhat.com/themes/custom/rhdp/images/design/logo-summit.png" alt="Red Hat Summit" />
+          </a>
+        </div>
+      </div>
+    </footer>
+  </div>
+  <!-- layout-container -->
+  <script type="text/javascript">
+    $(".dropdown-trigger").click(function(){
+      $(".dropdwn-menu").toggle();
+    });   
+  </script>
+  </body>
+</html>
