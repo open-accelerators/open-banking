@@ -1,0 +1,83 @@
+<div class="container">
+  <h1><span class="field field--name-title field--type-string field--label-hidden"> Catalogue</span></h1>
+</div>
+<div class="node__content">
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__items">
+  <div class="field__item">
+    <p>  This is a catalogue of APIs from the specifications authored by the open banking implementation entity under the directive from the United Kingdom's Competition and Markets Authority. The APIs are free to use for experimentation. This environment contains simulated data and limited support. Additionally APIs from other bodies such as STET and BIAN are be considered in the future. </p>
+  </div>
+</div>
+{% if current_user %}
+<section class="assembly assembly-type-katacodas" style="padding:unset">
+  <div class="field field--name-field-katacodas field--type-entity-reference field--label-hidden field__items">
+    <div class="field__item">
+      <article role="article" about="/" class="node node--type-katacoda-individual-lesson node--view-mode-card">
+        <div class="info-outer">
+          <div class="lesson--title">
+            <h2>
+              <a href="/">Branch Data</a>
+            </h2>
+            <h2></h2>
+          </div>
+          <div class="lesson--time-level">Sandbox | Default</div>
+          <div class="lesson--description">
+            <p>This API allows third parties to retrieve information about branches, including service hours, facility features such as whether wifi is available. Additional information such as contact details is also available. </p>
+          </div>
+          <div class="lesson--publish-meta">
+            <p>3.1.12</p>
+          </div>
+        </div>
+        <div class="lesson-link">
+          <a href="/catalogue-details?node=uk_branch_data">Explore</a>
+        </div>
+      </article>
+    </div>
+    <div class="field__item">
+      <article role="article" about="/" class="node node--type-katacoda-individual-lesson node--view-mode-card">
+        <div class="info-outer">
+          <div class="lesson--title">
+            <h2>
+              <a href="/">Personal Current Account Data</a>
+            </h2>
+            <h2></h2>
+          </div>
+          <div class="lesson--time-level">Sandbox | Default</div>
+          <div class="lesson--description">
+            <p>Use this API to work the current account information for individual and joint accounts. Qualification information and benefits of the account are provided by the API</p>
+          </div>
+          <div class="lesson--publish-meta">
+            <p>3.1.12</p>
+          </div>
+        </div>
+        <div class="lesson-link">
+          <a href="/catalogue-details?node=uk_personal_current_account_data">Explore</a>
+        </div>
+      </article>
+    </div>    
+  </div>
+</section>
+{% else %}
+<section class="assembly assembly-type-rich_text_columns">
+  <div class="container">
+<a class="button hidden-after-login" href="/login">Log in to access</a>
+  </div>
+</section>
+<div style="padding:20px"></div> 
+  
+{% endif %}
+  
+          <section id="assembly-field-sections-4395" class="assembly assembly-type-call_to_action">
+            <div class="container">
+              <h2 class="header field field--name-field-title field--type-string field--label-hidden field__items">
+                Want to dig deeper?
+              </h2>
+              <div class="clearfix text-formatted field field--name-field-cta-content field--type-text-long field--label-hidden field__items">
+                <div class="field__item">
+                  <p>Interested in learning how Red Hat can help you realize the potential of open banking? Connect with us and we can set you up for a test drive.</p>
+                </div>
+              </div>
+              <a href="https://www.redhat.com/en/contact#contact-form" class="button heavy-cta">Connect</a>
+            </div>
+          </section>  
+
+<div style="padding:20px"></div>
