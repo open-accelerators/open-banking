@@ -1,0 +1,91 @@
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.0/swagger-ui.css" />
+
+<link rel="stylesheet" href="https://cdn.rawgit.com/raphaelfabeni/css-loader/7090f306bff5627b5b94c3607306838db7df7396/dist/css-loader.css"/>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.0/swagger-ui-bundle.js"></script>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/swagger-ui/3.22.0/swagger-ui-standalone-preset.js"></script>
+
+<script src="https://unpkg.com/swagger-client@3.9.0/browser/index.js" crosorigin="anonymous"></script>
+
+<link rel="stylesheet" href="/css/swagger-ui-custom.css" />
+ 
+{% assign uri = request.request_uri | split: 'node=' %}
+{% assign node = uri[1] %}
+{% assign service = provider.services[node] %}  
+
+{% for item in current_account.applications %}
+  {% if item.service.id == service.id %}
+    {% assign application = item %}
+    {% assign key = application.user_key' %}
+  {% endif %}
+{% endfor %}
+
+<div class="container">
+  <h1><span class="field field--name-title field--type-string field--label-hidden">Catalogue Details</span></h1>
+</div>
+
+<div class="node__content">
+<div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__items">
+  <div class="field__item">    
+    <p>You are able to work with this API and excerise it's methods with the back end mock data. For your convenience the configured security profile is based on user key versus OIDC. This is to make it easier to rapidly experiment with the APIs without having to generate a new token per session. Applying the security profile in production would not be appropriate. </p>
+    <p>A key has been generated for your account to access this API. Setting the <code>user-key</code> header with <code>{{key}}</code> value will enable you to access this API. </p>
+  </div>
+</div>
+  
+<div class="container">
+  <div class="row">     
+      <div id="swagger-ui">
+        <div class="loader loader-default is-active"></div>
+      </div>
+  </div> 
+</div>
+  
+<script type="text/javascript">
+  window.onload = function() {
+    let found;
+    $.getJSON( "/config.json", function( configurations ) {  
+      configurations.forEach(function (configuration) {
+        if (configuration.id == '{{service.id}}') {
+          found = configuration;
+        }
+      });
+    }); 
+  
+    let url = '{{ service.api_specs.first.url }}';
+    SwaggerClient.http.withCredentials = true;
+    var swaggerClient = new SwaggerClient(url).then(function(result) {
+
+      result.spec.host = found.sandbox;
+      
+      const ui = SwaggerUIBundle({
+        spec: result.spec,
+        dom_id: "#swagger-ui",
+        docExpansion: "none",
+        presets: [
+          SwaggerUIBundle.presets.apis
+        ]
+      })
+      
+      window.ui = ui;
+    });
+  }
+</script>
+
+<div style="padding:20px"></div>
+<section id="assembly-field-sections-1205" class="assembly assembly-type-call_to_action">
+  <div class="container">
+          <h2 class="header field field--name-field-title field--type-string field--label-hidden field__items">
+            Ready for your brand and real data?
+          </h2>
+          <div class="clearfix text-formatted field field--name-field-cta-content field--type-text-long field--label-hidden field__items">
+            <div class="field__item">
+              <p class="text-align-center" dir="ltr"></p>
+              Take our sandbox with you and apply your brand and data. <br/>We wil; host it for you if you want. 
+            </div>
+          </div>
+          <a href="https://www.redhat.com/en/contact" class="button heavy-cta">Connect with us</a>
+  </div>
+</section>
+<div style="padding:20px"></div>
