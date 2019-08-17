@@ -2,7 +2,7 @@
   "info": {
     "_postman_id": "6089aa41-ff19-4492-a25e-ab3012812889",
     "name": "Branch Data Collection",
-    "description": "version=1 This is branch data collection",
+    "description": "version=1.1 This is branch data collection",
     "schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
   },
   "item": [
