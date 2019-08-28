@@ -15,7 +15,7 @@
 			},
 			"response": [
 				{
-					"name": "GET Commercial Credit Card Data",
+					"name": "get-commercial-credit-card-data",
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
@@ -118,7 +118,103 @@
 				"header": [],
 				"url": "https://api.hsbc.com/open-banking/v2.2/commercial-credit-cards"
 			},
-			"response": []
+			"response": [
+				{
+					"name": "head-commercial-credit-card-data",
+					"originalRequest": {
+						"method": "HEAD",
+						"header": [],
+						"url": "https://api.hsbc.com/open-banking/v2.2/commercial-credit-cards"
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Content-Type",
+							"value": "application/prs.openbanking.opendata.v2.2+json"
+						},
+						{
+							"key": "Content-Length",
+							"value": "4786"
+						},
+						{
+							"key": "Connection",
+							"value": "keep-alive"
+						},
+						{
+							"key": "Date",
+							"value": "Wed, 28 Aug 2019 18:26:30 GMT"
+						},
+						{
+							"key": "x-amzn-RequestId",
+							"value": "5b1d51ba-c9c1-11e9-972d-a97e0fc25fe9"
+						},
+						{
+							"key": "Last-Modified",
+							"value": "Tue, 17 Jul 2018 14:33:57 GMT"
+						},
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "https://developer.hsbc.com"
+						},
+						{
+							"key": "Strict-Transport-Security",
+							"value": "max-age=31536000"
+						},
+						{
+							"key": "X-Frame-Options",
+							"value": "DENY"
+						},
+						{
+							"key": "x-amz-apigw-id",
+							"value": "fJQViHMWjoEFj5w="
+						},
+						{
+							"key": "Cache-Control",
+							"value": "max-age=28800"
+						},
+						{
+							"key": "X-Content-Type-Options",
+							"value": "nosniff"
+						},
+						{
+							"key": "ETag",
+							"value": "\"12b2-KLVdTpGlwXDoRyfKK/H0g1SyQFE\""
+						},
+						{
+							"key": "X-Amzn-Trace-Id",
+							"value": "Root=1-5d66c756-d87364b06148db08b39d3168;Sampled=0"
+						},
+						{
+							"key": "Via",
+							"value": "1.1 9b09209d18cb42b1369b4930fcf40560.cloudfront.net (CloudFront), 1.1 0cddd53986ce57d7e0d3373745796c5a.cloudfront.net (CloudFront)"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "ORD52-C2"
+						},
+						{
+							"key": "X-Amz-Cf-Pop",
+							"value": "ORD51-C2"
+						},
+						{
+							"key": "Age",
+							"value": "5650"
+						},
+						{
+							"key": "X-Cache",
+							"value": "Hit from cloudfront"
+						},
+						{
+							"key": "X-Amz-Cf-Id",
+							"value": "k_uUWmXmuSd6ROTBUYR7gGVDMqTg6LQ0vouyTVS2cipJ39PxyVhEjw=="
+						}
+					],
+					"cookie": [],
+					"body": null
+				}
+			]
 		}
 	],
 	"event": [
