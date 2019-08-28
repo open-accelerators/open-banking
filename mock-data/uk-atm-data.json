@@ -11,7 +11,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "https://api.hsbc.com/open-banking/v2.2/atms"
+				"url": "/atms"
 			},
 			"response": [
 				{
@@ -19,92 +19,12 @@
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"url": "https://api.hsbc.com/open-banking/v2.2/atms"
+						"url": "/atms"
 					},
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
 					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/prs.openbanking.opendata.v2.2+json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "839781"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 28 Aug 2019 21:25:51 GMT"
-						},
-						{
-							"key": "x-amzn-RequestId",
-							"value": "679d829f-c9da-11e9-98e6-93ece323b59b"
-						},
-						{
-							"key": "Last-Modified",
-							"value": "Tue, 27 Aug 2019 23:51:27 GMT"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "https://developer.hsbc.com"
-						},
-						{
-							"key": "Strict-Transport-Security",
-							"value": "max-age=31536000"
-						},
-						{
-							"key": "X-Frame-Options",
-							"value": "DENY"
-						},
-						{
-							"key": "x-amz-apigw-id",
-							"value": "fJqmhGXVjoEFkMA="
-						},
-						{
-							"key": "Cache-Control",
-							"value": "max-age=28800"
-						},
-						{
-							"key": "X-Content-Type-Options",
-							"value": "nosniff"
-						},
-						{
-							"key": "ETag",
-							"value": "\"cd065-k82UzV0+VQ7WAP6cCuv7sN8Woqg\""
-						},
-						{
-							"key": "X-Amzn-Trace-Id",
-							"value": "Root=1-5d66f15c-fa73cb9495f66bb79bb50e41;Sampled=0"
-						},
-						{
-							"key": "Via",
-							"value": "1.1 0021289ddeab4210dd6ef518793791b8.cloudfront.net (CloudFront), 1.1 4f81f573d1d8e804c79450e430cd47be.cloudfront.net (CloudFront)"
-						},
-						{
-							"key": "X-Amz-Cf-Pop",
-							"value": "IND6"
-						},
-						{
-							"key": "X-Amz-Cf-Pop",
-							"value": "ORD51-C1"
-						},
-						{
-							"key": "Age",
-							"value": "98"
-						},
-						{
-							"key": "X-Cache",
-							"value": "Hit from cloudfront"
-						},
-						{
-							"key": "X-Amz-Cf-Id",
-							"value": "qhZYxHfAjVCG3EpcxbDgFfLzg8NV57rqp-clG0kgbH6S5xu4rqdTdg=="
-						}
 					],
 					"cookie": [],
 					"body": "{\n    \"meta\": {\n        \"LastUpdated\": \"2019-08-27T23:51:27.083Z\",\n        \"TotalResults\": 1600,\n        \"Agreement\": \"Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions\",\n        \"License\": \"https://www.openbanking.org.uk/open-licence\",\n        \"TermsOfUse\": \"https://www.openbanking.org.uk/terms\"\n    },\n    \"data\": [\n        {\n            \"Brand\": [\n                {\n                    \"BrandName\": \"Red Hat\",\n                    \"ATM\": [\n                        {\n                            \"Identification\": \"1\",\n                            \"SupportedLanguages\": [\n                                \"en\",\n                                \"fr\",\n                                \"es\",\n                                \"de\"\n                            ],\n                            \"ATMServices\": [\n                                \"CashWithdrawal\",\n                                \"PINChange\",\n                                \"MobilePhoneTopUp\",\n                                \"Balance\",\n                                \"MiniStatement\",\n                                \"CharityDonation\"\n                            ],\n                            \"SupportedCurrencies\": [\n                                \"GBP\"\n                            ],\n                            \"MinimumPossibleAmount\": \"5\",\n                            \"Branch\": {\n                                \"Identification\": \"1\"\n                            },\n                            \"Location\": {\n                                \"Site\": {\n                                    \"Name\": \"Site Name\"\n                                },\n                                \"PostalAddress\": {\n                                    \"StreetName\": \"123 Street\",\n                                    \"TownName\": \"London\",\n                                    \"Country\": \"GB\",\n                                    \"PostCode\": \"ABC 100\",\n                                    \"GeoLocation\": {\n                                        \"GeographicCoordinates\": {\n                                            \"Latitude\": \"52.9740105\",\n                                            \"Longitude\": \"-1.3090999\"\n                                        }\n                                    }\n                                }\n                            }\n                        },\n                        {\n                            \"Identification\": \"2\",\n                            \"SupportedLanguages\": [\n                                \"en\",\n                                \"fr\",\n                                \"es\",\n                                \"de\"\n                            ],\n                            \"ATMServices\": [\n                                \"CashWithdrawal\",\n                                \"PINChange\",\n                                \"MobilePhoneTopUp\",\n                                \"Balance\",\n                                \"MiniStatement\",\n                                \"CharityDonation\"\n                            ],\n                            \"SupportedCurrencies\": [\n                                \"GBP\"\n                            ],\n                            \"MinimumPossibleAmount\": \"10\",\n                            \"Branch\": {\n                                \"Identification\": \"2\"\n                            },\n                            \"Location\": {\n                                \"Site\": {\n                                    \"Name\": \"Site Name\"\n                                },\n                                \"PostalAddress\": {\n                                    \"StreetName\": \"Street Name\",\n                                    \"TownName\": \"London\",\n                                    \"Country\": \"GB\",\n                                    \"PostCode\": \"ABC 123\",\n                                    \"GeoLocation\": {\n                                        \"GeographicCoordinates\": {\n                                            \"Latitude\": \"52.9267768\",\n                                            \"Longitude\": \"-1.2158783\"\n                                        }\n                                    }\n                                }\n                            }\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}"
@@ -116,7 +36,7 @@
 			"request": {
 				"method": "HEAD",
 				"header": [],
-				"url": "https://api.hsbc.com/open-banking/v2.2/atms"
+				"url": "/atms"
 			},
 			"response": [
 				{
@@ -124,92 +44,13 @@
 					"originalRequest": {
 						"method": "HEAD",
 						"header": [],
-						"url": "https://api.hsbc.com/open-banking/v2.2/atms"
+						"url": "/atms"
 					},
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
 					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/prs.openbanking.opendata.v2.2+json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "839781"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 28 Aug 2019 21:25:51 GMT"
-						},
-						{
-							"key": "x-amzn-RequestId",
-							"value": "679d829f-c9da-11e9-98e6-93ece323b59b"
-						},
-						{
-							"key": "Last-Modified",
-							"value": "Tue, 27 Aug 2019 23:51:27 GMT"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "https://developer.hsbc.com"
-						},
-						{
-							"key": "Strict-Transport-Security",
-							"value": "max-age=31536000"
-						},
-						{
-							"key": "X-Frame-Options",
-							"value": "DENY"
-						},
-						{
-							"key": "x-amz-apigw-id",
-							"value": "fJqmhGXVjoEFkMA="
-						},
-						{
-							"key": "Cache-Control",
-							"value": "max-age=28800"
-						},
-						{
-							"key": "X-Content-Type-Options",
-							"value": "nosniff"
-						},
-						{
-							"key": "ETag",
-							"value": "\"cd065-k82UzV0+VQ7WAP6cCuv7sN8Woqg\""
-						},
-						{
-							"key": "X-Amzn-Trace-Id",
-							"value": "Root=1-5d66f15c-fa73cb9495f66bb79bb50e41;Sampled=0"
-						},
-						{
-							"key": "Via",
-							"value": "1.1 0021289ddeab4210dd6ef518793791b8.cloudfront.net (CloudFront), 1.1 4f81f573d1d8e804c79450e430cd47be.cloudfront.net (CloudFront)"
-						},
-						{
-							"key": "X-Amz-Cf-Pop",
-							"value": "IND6"
-						},
-						{
-							"key": "X-Amz-Cf-Pop",
-							"value": "ORD51-C1"
-						},
-						{
-							"key": "Age",
-							"value": "84"
-						},
-						{
-							"key": "X-Cache",
-							"value": "Hit from cloudfront"
-						},
-						{
-							"key": "X-Amz-Cf-Id",
-							"value": "JB4qtQi5WQ2Y3s3PxS6v47UiLq6Y93iF5kFMWWX-4EIezQjoYB0RqQ=="
-						}
+		
 					],
 					"cookie": [],
 					"body": null
