@@ -11,7 +11,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "https://api.hsbc.com/open-banking/v2.2/unsecured-sme-loans"
+				"url": "/unsecured-sme-loans"
 			},
 			"response": [
 				{
@@ -19,92 +19,12 @@
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"url": "https://api.hsbc.com/open-banking/v2.2/unsecured-sme-loans"
+						"url": "/unsecured-sme-loans"
 					},
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
 					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/prs.openbanking.opendata.v2.2+json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "4611"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 28 Aug 2019 21:39:31 GMT"
-						},
-						{
-							"key": "x-amzn-RequestId",
-							"value": "52026ed9-c9dc-11e9-9b08-c7991dff3076"
-						},
-						{
-							"key": "Last-Modified",
-							"value": "Mon, 16 Jul 2018 09:36:24 GMT"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "https://developer.hsbc.com"
-						},
-						{
-							"key": "Strict-Transport-Security",
-							"value": "max-age=31536000"
-						},
-						{
-							"key": "X-Frame-Options",
-							"value": "DENY"
-						},
-						{
-							"key": "x-amz-apigw-id",
-							"value": "fJsnFHe6joEFQYQ="
-						},
-						{
-							"key": "Cache-Control",
-							"value": "max-age=28800"
-						},
-						{
-							"key": "X-Content-Type-Options",
-							"value": "nosniff"
-						},
-						{
-							"key": "ETag",
-							"value": "\"1203-25rCGpHu3bLJk3/bwD0Jyu2PkKE\""
-						},
-						{
-							"key": "X-Amzn-Trace-Id",
-							"value": "Root=1-5d66f493-4acaf45087c6ec607711eaf0;Sampled=0"
-						},
-						{
-							"key": "Via",
-							"value": "1.1 bb9848ce4551a5b4618de502ae18859f.cloudfront.net (CloudFront), 1.1 a077f80f2fe737f90e09bad4a75fa2bc.cloudfront.net (CloudFront)"
-						},
-						{
-							"key": "X-Amz-Cf-Pop",
-							"value": "IND6"
-						},
-						{
-							"key": "X-Amz-Cf-Pop",
-							"value": "ORD51-C1"
-						},
-						{
-							"key": "Age",
-							"value": "91"
-						},
-						{
-							"key": "X-Cache",
-							"value": "Hit from cloudfront"
-						},
-						{
-							"key": "X-Amz-Cf-Id",
-							"value": "JJn3z-uM2cPPQkGTMVn95e_zJ-2gQZJ1x44UMuG9ZMVou-vGkj5gYQ=="
-						}
 					],
 					"cookie": [],
 					"body": "{\n    \"meta\": {\n        \"LastUpdated\": \"2018-07-16T09:36:24.361Z\",\n        \"TotalResults\": 1,\n        \"Agreement\": \"Use of the APIs and any related data will be subject to the terms of the Open Licence and subject to terms and conditions\",\n        \"License\": \"https://www.openbanking.org.uk/open-licence\",\n        \"TermsOfUse\": \"https://www.openbanking.org.uk/terms\"\n    },\n    \"data\": [\n        {\n            \"Brand\": [\n                {\n                    \"BrandName\": \"Red Hat\",\n                    \"SMELoan\": [\n                        {\n                            \"Name\": \"Small Business Loan\",\n                            \"Identification\": \"Small Business Loan\",\n                            \"Segment\": [\n                                \"Business\"\n                            ],\n                            \"SMELoanMarketingState\": [\n                                {\n                                    \"Identification\": \"Small Business Loan\",\n                                    \"MarketingState\": \"Regular\",\n                                    \"CoreProduct\": {\n                                        \"ProductDescription\": \"A fixed rate, fixed term loan, which provides finance for a variety of business purposes.\",\n                                        \"ProductURL\": \"product.com\",\n                                        \"TcsAndCsURL\": \"product.com\",\n                                        \"SalesAccessChannels\": [\n                                            \"Branch\",\n                                            \"RelationshipManager\",\n                                            \"Online\",\n                                            \"CallCentre\"\n                                        ],\n                                        \"ServicingAccessChannels\": [\n                                            \"ATM\",\n                                            \"Branch\",\n                                            \"CallCentre\",\n                                            \"MobileBankingApp\",\n                                            \"Online\",\n                                            \"RelationshipManager\"\n                                        ],\n                                        \"EarlyPaymentFeeApplicable\": true,\n                                        \"OverPaymentFeeApplicable\": false,\n                                        \"LoanApplicationFeeChargeType\": \"ChargedAfterLoanApproval\",\n                                        \"OverpaymentAllowedIndicator\": true\n                                    },\n                                    \"LoanInterest\": {\n                                        \"LoanInterestTierBandSet\": [\n                                            {\n                                                \"TierBandMethod\": \"Whole\",\n                                                \"Identification\": \"£1000-£25000\",\n                                                \"CalculationMethod\": \"SimpleInterest\",\n                                                \"LoanInterestTierBand\": [\n                                                    {\n                                                        \"Identification\": \"£1000-£25000\",\n                                                        \"TierValueMinimum\": \"1000.00\",\n                                                        \"TierValueMaximum\": \"25000.00\",\n                                                        \"TierValueMinTerm\": 1,\n                                                        \"MinTermPeriod\": \"Year\",\n                                                        \"TierValueMaxTerm\": 10,\n                                                        \"MaxTermPeriod\": \"Year\",\n                                                        \"FixedVariableInterestRateType\": \"Fixed\",\n                                                        \"RepAPR\": \"7.4\",\n                                                        \"LoanProviderInterestRateType\": \"FixedRate\",\n                                                        \"Notes\": [\n                                                            \"Annual Percentage Rate Representative (APR Representative) is the advertised rate (or a lower rate) we reasonably expect at least 51% of people who are accepted for and enter into the loan agreement as a result of the advertising or marketing will pay.\"\n                                                        ],\n                                                        \"LoanInterestFeesCharges\": [\n                                                            {\n                                                                \"LoanInterestFeeChargeDetail\": [\n                                                                    {\n                                                                        \"FeeType\": \"Arrangement\",\n                                                                        \"NegotiableIndicator\": false,\n                                                                        \"FeeAmount\": \"100.00\",\n                                                                        \"ApplicationFrequency\": \"OnOpening\",\n                                                                        \"CalculationFrequency\": \"OnOpening\",\n                                                                        \"Notes\": [\n                                                                            \"Arrangement fee of £100.00 collected upfront.\"\n                                                                        ]\n                                                                    }\n                                                                ]\n                                                            }\n                                                        ]\n                                                    }\n                                                ]\n                                            }\n                                        ]\n                                    },\n                                    \"Repayment\": [\n                                        {\n                                            \"RepaymentType\": \"FixedCapitalFullyAmortising\",\n                                            \"RepaymentFrequency\": \"Monthly\",\n                                            \"AmountType\": \"CapitalAndInterest\",\n                                            \"RepaymentFeeCharges\": {\n                                                \"RepaymentFeeChargeDetail\": [\n                                                    {\n                                                        \"FeeType\": \"EarlyRepayment\",\n                                                        \"NegotiableIndicator\": false,\n                                                        \"ApplicationFrequency\": \"OnClosing\",\n                                                        \"CalculationFrequency\": \"OnClosing\",\n                                                        \"Notes\": [\n                                                            \"Early Repayment Charges: An interest charge of 1 month and 28 days, automatically included in the settlement figure\"\n                                                        ]\n                                                    }\n                                                ]\n                                            }\n                                        }\n                                    ],\n                                    \"Eligibility\": {\n                                        \"AgeEligibility\": {\n                                            \"MinimumAge\": 18\n                                        },\n                                        \"ResidencyEligibility\": [\n                                            {\n                                                \"ResidencyType\": \"Incorporated\",\n                                                \"ResidencyIncluded\": [\n                                                    \"ELUK\"\n                                                ]\n                                            }\n                                        ],\n                                        \"CreditCheckEligibility\": {\n                                            \"ScoringType\": \"Hard\",\n                                            \"Notes\": [\n                                                \"Only Applicable upon Application\"\n                                            ]\n                                        },\n                                        \"OtherEligibility\": [\n                                            {\n                                                \"Name\": \"Any business customer\",\n                                                \"Description\": \"Any creditworthy business customer who is assessed to meet bank's affordability requirements.\",\n                                                \"Type\": \"BusinessOnly\"\n                                            }\n                                        ]\n                                    },\n                                    \"OtherFeesCharges\": {\n                                        \"FeeChargeDetail\": [\n                                            {\n                                                \"FeeCategory\": \"Other\",\n                                                \"FeeType\": \"Arrangement\",\n                                                \"NegotiableIndicator\": false,\n                                                \"FeeAmount\": \"100.00\",\n                                                \"ApplicationFrequency\": \"OnOpening\",\n                                                \"CalculationFrequency\": \"OnOpening\"\n                                            }\n                                        ]\n                                    },\n                                    \"FeaturesAndBenefits\": {\n                                        \"FeatureBenefitItem\": [\n                                            {\n                                                \"Identification\": \"Fixed Interest Rate and Repayment\",\n                                                \"Type\": \"Other\",\n                                                \"Name\": \"Fixed Interest Rate and Repayment\",\n                                                \"Textual\": \"Know where you stand as your interest rate and repayments are fixed for the life of the loan.\",\n                                                \"OtherType\": {\n                                                    \"Name\": \"Repayment\",\n                                                    \"Description\": \"Benefits related to Repayment\"\n                                                }\n                                            },\n                                            {\n                                                \"Identification\": \"Track Repayments using BIB\",\n                                                \"Type\": \"Other\",\n                                                \"Name\": \"Track Repayments using BIB\",\n                                                \"Textual\": \"Track your repayments and the outstanding balance using Business Internet Banking\",\n                                                \"OtherType\": {\n                                                    \"Name\": \"Repayment\",\n                                                    \"Description\": \"Benefits related to Repayment\"\n                                                }\n                                            },\n                                            {\n                                                \"Identification\": \"Tax Liability\",\n                                                \"Type\": \"Other\",\n                                                \"Name\": \"Offset interest against tax liability\",\n                                                \"Textual\": \"Offset the interest against your tax liabilities, as with all business finance\",\n                                                \"OtherType\": {\n                                                    \"Name\": \"Tax liability\",\n                                                    \"Description\": \"Benefits related to Tax liability\"\n                                                }\n                                            },\n                                            {\n                                                \"Identification\": \"Payment Holiday\",\n                                                \"Type\": \"PaymentHolidays\",\n                                                \"Name\": \"Payment Holiday\",\n                                                \"Textual\": \"Take a payment holiday for the first 3 months of the loan\"\n                                            },\n                                            {\n                                                \"Identification\": \"Protect cash flow\",\n                                                \"Type\": \"Other\",\n                                                \"Name\": \"Protect cash flow\",\n                                                \"Textual\": \"Protect your cash flow from the impact of large purchases with fixed monthly repayments.\",\n                                                \"OtherType\": {\n                                                    \"Name\": \"Cash Flow\",\n                                                    \"Description\": \"Benefits related to cash flow\"\n                                                }\n                                            }\n                                        ]\n                                    }\n                                }\n                            ]\n                        }\n                    ]\n                }\n            ]\n        }\n    ]\n}"
@@ -116,7 +36,7 @@
 			"request": {
 				"method": "HEAD",
 				"header": [],
-				"url": "https://api.hsbc.com/open-banking/v2.2/unsecured-sme-loans"
+				"url": "/unsecured-sme-loans"
 			},
 			"response": [
 				{
@@ -124,92 +44,12 @@
 					"originalRequest": {
 						"method": "HEAD",
 						"header": [],
-						"url": "https://api.hsbc.com/open-banking/v2.2/unsecured-sme-loans"
+						"url": "/unsecured-sme-loans"
 					},
 					"status": "OK",
 					"code": 200,
 					"_postman_previewlanguage": "json",
 					"header": [
-						{
-							"key": "Content-Type",
-							"value": "application/prs.openbanking.opendata.v2.2+json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "4611"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 28 Aug 2019 21:39:31 GMT"
-						},
-						{
-							"key": "x-amzn-RequestId",
-							"value": "52026ed9-c9dc-11e9-9b08-c7991dff3076"
-						},
-						{
-							"key": "Last-Modified",
-							"value": "Mon, 16 Jul 2018 09:36:24 GMT"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "https://developer.hsbc.com"
-						},
-						{
-							"key": "Strict-Transport-Security",
-							"value": "max-age=31536000"
-						},
-						{
-							"key": "X-Frame-Options",
-							"value": "DENY"
-						},
-						{
-							"key": "x-amz-apigw-id",
-							"value": "fJsnFHe6joEFQYQ="
-						},
-						{
-							"key": "Cache-Control",
-							"value": "max-age=28800"
-						},
-						{
-							"key": "X-Content-Type-Options",
-							"value": "nosniff"
-						},
-						{
-							"key": "ETag",
-							"value": "\"1203-25rCGpHu3bLJk3/bwD0Jyu2PkKE\""
-						},
-						{
-							"key": "X-Amzn-Trace-Id",
-							"value": "Root=1-5d66f493-4acaf45087c6ec607711eaf0;Sampled=0"
-						},
-						{
-							"key": "Via",
-							"value": "1.1 bb9848ce4551a5b4618de502ae18859f.cloudfront.net (CloudFront), 1.1 a077f80f2fe737f90e09bad4a75fa2bc.cloudfront.net (CloudFront)"
-						},
-						{
-							"key": "X-Amz-Cf-Pop",
-							"value": "IND6"
-						},
-						{
-							"key": "X-Amz-Cf-Pop",
-							"value": "ORD51-C1"
-						},
-						{
-							"key": "Age",
-							"value": "79"
-						},
-						{
-							"key": "X-Cache",
-							"value": "Hit from cloudfront"
-						},
-						{
-							"key": "X-Amz-Cf-Id",
-							"value": "p2FDAN4ak_pPsHU97DyCLSHfaPbwiww4nm0DWzKW-xKB3oBuIrqbCQ=="
-						}
 					],
 					"cookie": [],
 					"body": null
