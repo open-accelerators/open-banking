@@ -27,7 +27,7 @@
 					"header": [
 						{
 							"key": "Content-Type",
-							"value": "application/prs.openbanking.opendata.v2.2+json"
+							"value": "application/json charset=utf-8"
 						}
 					],
 					"cookie": [],
