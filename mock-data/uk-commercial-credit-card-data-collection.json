@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "5d6425b9-9dcf-493f-9044-6093ded71510",
 		"name": "uk-commercial-credit-card-data-collection",
-		"description": "version=1 This is commercial credit card data collection",
+		"description": "version=3 This is commercial credit card data collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
