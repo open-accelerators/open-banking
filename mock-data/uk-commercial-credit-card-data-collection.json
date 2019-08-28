@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "5d6425b9-9dcf-493f-9044-6093ded71510",
 		"name": "uk-commercial-credit-card-data-collection",
-		"description": "version=1 This is commercial credit card data collection",
+		"description": "version=2 This is commercial credit card data collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
@@ -11,7 +11,7 @@
 			"request": {
 				"method": "GET",
 				"header": [],
-				"url": "https://api.hsbc.com/open-banking/v2.2/commercial-credit-cards"
+				"url": "/commercial-credit-cards"
 			},
 			"response": [
 				{
@@ -19,7 +19,7 @@
 					"originalRequest": {
 						"method": "GET",
 						"header": [],
-						"url": "https://api.hsbc.com/open-banking/v2.2/commercial-credit-cards"
+						"url": "/commercial-credit-cards"
 					},
 					"status": "OK",
 					"code": 200,
@@ -28,82 +28,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/prs.openbanking.opendata.v2.2+json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "4786"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 28 Aug 2019 18:26:30 GMT"
-						},
-						{
-							"key": "x-amzn-RequestId",
-							"value": "5b1d51ba-c9c1-11e9-972d-a97e0fc25fe9"
-						},
-						{
-							"key": "Last-Modified",
-							"value": "Tue, 17 Jul 2018 14:33:57 GMT"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "https://developer.hsbc.com"
-						},
-						{
-							"key": "Strict-Transport-Security",
-							"value": "max-age=31536000"
-						},
-						{
-							"key": "X-Frame-Options",
-							"value": "DENY"
-						},
-						{
-							"key": "x-amz-apigw-id",
-							"value": "fJQViHMWjoEFj5w="
-						},
-						{
-							"key": "Cache-Control",
-							"value": "max-age=28800"
-						},
-						{
-							"key": "X-Content-Type-Options",
-							"value": "nosniff"
-						},
-						{
-							"key": "ETag",
-							"value": "\"12b2-KLVdTpGlwXDoRyfKK/H0g1SyQFE\""
-						},
-						{
-							"key": "X-Amzn-Trace-Id",
-							"value": "Root=1-5d66c756-d87364b06148db08b39d3168;Sampled=0"
-						},
-						{
-							"key": "Via",
-							"value": "1.1 9b09209d18cb42b1369b4930fcf40560.cloudfront.net (CloudFront), 1.1 aefca35da479fa09516461bbcf9ed01c.cloudfront.net (CloudFront)"
-						},
-						{
-							"key": "X-Amz-Cf-Pop",
-							"value": "ORD52-C2"
-						},
-						{
-							"key": "X-Amz-Cf-Pop",
-							"value": "ORD51-C2"
-						},
-						{
-							"key": "Age",
-							"value": "274"
-						},
-						{
-							"key": "X-Cache",
-							"value": "Hit from cloudfront"
-						},
-						{
-							"key": "X-Amz-Cf-Id",
-							"value": "O3DvmaZ9DrMO93Zf8Bon66IKAzsVbkJDiEQSk9U8K-jrv6eXkCdNNA=="
 						}
 					],
 					"cookie": [],
@@ -116,7 +40,7 @@
 			"request": {
 				"method": "HEAD",
 				"header": [],
-				"url": "https://api.hsbc.com/open-banking/v2.2/commercial-credit-cards"
+				"url": "/commercial-credit-cards"
 			},
 			"response": [
 				{
@@ -124,7 +48,7 @@
 					"originalRequest": {
 						"method": "HEAD",
 						"header": [],
-						"url": "https://api.hsbc.com/open-banking/v2.2/commercial-credit-cards"
+						"url": "/commercial-credit-cards"
 					},
 					"status": "OK",
 					"code": 200,
@@ -133,82 +57,6 @@
 						{
 							"key": "Content-Type",
 							"value": "application/prs.openbanking.opendata.v2.2+json"
-						},
-						{
-							"key": "Content-Length",
-							"value": "4786"
-						},
-						{
-							"key": "Connection",
-							"value": "keep-alive"
-						},
-						{
-							"key": "Date",
-							"value": "Wed, 28 Aug 2019 18:26:30 GMT"
-						},
-						{
-							"key": "x-amzn-RequestId",
-							"value": "5b1d51ba-c9c1-11e9-972d-a97e0fc25fe9"
-						},
-						{
-							"key": "Last-Modified",
-							"value": "Tue, 17 Jul 2018 14:33:57 GMT"
-						},
-						{
-							"key": "Access-Control-Allow-Origin",
-							"value": "https://developer.hsbc.com"
-						},
-						{
-							"key": "Strict-Transport-Security",
-							"value": "max-age=31536000"
-						},
-						{
-							"key": "X-Frame-Options",
-							"value": "DENY"
-						},
-						{
-							"key": "x-amz-apigw-id",
-							"value": "fJQViHMWjoEFj5w="
-						},
-						{
-							"key": "Cache-Control",
-							"value": "max-age=28800"
-						},
-						{
-							"key": "X-Content-Type-Options",
-							"value": "nosniff"
-						},
-						{
-							"key": "ETag",
-							"value": "\"12b2-KLVdTpGlwXDoRyfKK/H0g1SyQFE\""
-						},
-						{
-							"key": "X-Amzn-Trace-Id",
-							"value": "Root=1-5d66c756-d87364b06148db08b39d3168;Sampled=0"
-						},
-						{
-							"key": "Via",
-							"value": "1.1 9b09209d18cb42b1369b4930fcf40560.cloudfront.net (CloudFront), 1.1 0cddd53986ce57d7e0d3373745796c5a.cloudfront.net (CloudFront)"
-						},
-						{
-							"key": "X-Amz-Cf-Pop",
-							"value": "ORD52-C2"
-						},
-						{
-							"key": "X-Amz-Cf-Pop",
-							"value": "ORD51-C2"
-						},
-						{
-							"key": "Age",
-							"value": "5650"
-						},
-						{
-							"key": "X-Cache",
-							"value": "Hit from cloudfront"
-						},
-						{
-							"key": "X-Amz-Cf-Id",
-							"value": "k_uUWmXmuSd6ROTBUYR7gGVDMqTg6LQ0vouyTVS2cipJ39PxyVhEjw=="
 						}
 					],
 					"cookie": [],
