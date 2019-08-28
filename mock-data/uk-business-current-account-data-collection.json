@@ -2,7 +2,7 @@
 	"info": {
 		"_postman_id": "92a73246-5405-4a86-ba16-c9525c62d27e",
 		"name": "uk-business-current-account-data-collection",
-		"description": "version=1.0",
+		"description": "version=1 This is business current card data collection",
 		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
 	},
 	"item": [
