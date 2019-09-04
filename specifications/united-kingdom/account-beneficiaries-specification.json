@@ -1,680 +1,680 @@
 {
-  "swagger": "2.0",
-  "info": {
-    "title": "Account and Transaction API Specification",
-    "description": "Swagger for Account and Transaction API Specification",
-    "termsOfService": "https://www.openbanking.org.uk/terms",
-    "contact": {
-      "name": "Service Desk",
-      "email": "ServiceDesk@openbanking.org.uk"
+    "swagger": "2.0",
+    "info": {
+        "title": "Account Beneficaries",
+        "version": "v3.1.2",
+        "description": "Swagger for Account and Transaction API Specification",
+        "termsOfService": "https://www.openbanking.org.uk/terms",
+        "contact": {
+            "name": "Service Desk",
+            "email": "ServiceDesk@openbanking.org.uk"
+        },
+        "license": {
+            "name": "open-licence",
+            "url": "https://www.openbanking.org.uk/open-licence"
+        }
     },
-    "license": {
-      "name": "open-licence",
-      "url": "https://www.openbanking.org.uk/open-licence"
-    },
-    "version": "v3.1.2"
-  },
-  "basePath": "/open-banking/v3.1/aisp",
-  "schemes": [
-    "https"
-  ],
-  "consumes": [
-    "application/json; charset=utf-8",
-    "application/jose+jwe"
-  ],
-  "produces": [
-    "application/json; charset=utf-8",
-    "application/jose+jwe"
-  ],
-  "paths": {
-    "/accounts/{AccountId}/beneficiaries": {
-      "get": {
-        "tags": [
-          "Beneficiaries"
-        ],
-        "summary": "Get Beneficiaries",
-        "operationId": "GetAccountsAccountIdBeneficiaries",
-        "parameters": [
-          {
-            "name": "AccountId",
-            "in": "path",
-            "description": "AccountId",
-            "required": true,
-            "type": "string"
-          },
-          {
-            "in": "header",
-            "name": "x-fapi-auth-date",
-            "type": "string",
-            "required": false,
-            "description": "The time when the PSU last logged in with the TPP. \nAll dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: \nSun, 10 Sep 2017 19:43:31 UTC",
-            "pattern": "^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \\d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \\d{4} \\d{2}:\\d{2}:\\d{2} (GMT|UTC)$"
-          },
-          {
-            "in": "header",
-            "name": "x-fapi-customer-ip-address",
-            "type": "string",
-            "required": false,
-            "description": "The PSU's IP address if the PSU is currently logged in with the TPP."
-          },
-          {
-            "in": "header",
-            "name": "x-fapi-interaction-id",
-            "type": "string",
-            "required": false,
-            "description": "An RFC4122 UID used as a correlation id."
-          },
-          {
-            "in": "header",
-            "name": "Authorization",
-            "type": "string",
-            "required": true,
-            "description": "An Authorisation Token as per https://tools.ietf.org/html/rfc6750"
-          }
-        ],
-        "responses": {
-          "200": {
-            "description": "Beneficiaries Read",
-            "headers": {
-              "x-fapi-interaction-id": {
-                "type": "string",
-                "description": "An RFC4122 UID used as a correlation id."
-              }
-            },
-            "schema": {
-              "type": "object",
-              "required": [
-                "Data"
-              ],
-              "properties": {
-                "Data": {
-                  "type": "object",
-                  "properties": {
-                    "Beneficiary": {
-                      "type": "array",
-                      "items": {
-                        "type": "object",
-                        "properties": {
-                          "AccountId": {
-                            "description": "A unique and immutable identifier used to identify the account resource. This identifier has no meaning to the account owner.",
-                            "type": "string",
-                            "minLength": 1,
-                            "maxLength": 40
-                          },
-                          "BeneficiaryId": {
-                            "description": "A unique and immutable identifier used to identify the beneficiary resource. This identifier has no meaning to the account owner.",
-                            "type": "string",
-                            "minLength": 1,
-                            "maxLength": 40
-                          },
-                          "Reference": {
-                            "description": "Unique reference, as assigned by the creditor, to unambiguously refer to the payment transaction.\nUsage: If available, the initiating party should provide this reference in the structured remittance information, to enable reconciliation by the creditor upon receipt of the amount of money.\nIf the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor's reference or payment remittance identification should be quoted in the end-to-end transaction identification.",
-                            "type": "string",
-                            "minLength": 1,
-                            "maxLength": 35
-                          },
-                          "CreditorAgent": {
+    "basePath": "/open-banking/v3.1/aisp",
+    "schemes": [
+        "https"
+    ],
+    "consumes": [
+        "application/json; charset=utf-8",
+        "application/jose+jwe"
+    ],
+    "produces": [
+        "application/json; charset=utf-8",
+        "application/jose+jwe"
+    ],
+    "paths": {
+        "/accounts/{AccountId}/beneficiaries": {
+            "get": {
+                "tags": [
+                    "Beneficiaries"
+                ],
+                "parameters": [
+                    {
+                        "name": "AccountId",
+                        "description": "AccountId",
+                        "in": "path",
+                        "required": true,
+                        "type": "string"
+                    },
+                    {
+                        "name": "x-fapi-auth-date",
+                        "description": "The time when the PSU last logged in with the TPP. \nAll dates in the HTTP headers are represented as RFC 7231 Full Dates. An example is below: \nSun, 10 Sep 2017 19:43:31 UTC",
+                        "in": "header",
+                        "required": false,
+                        "type": "string",
+                        "pattern": "^(Mon|Tue|Wed|Thu|Fri|Sat|Sun), \\d{2} (Jan|Feb|Mar|Apr|May|Jun|Jul|Aug|Sep|Oct|Nov|Dec) \\d{4} \\d{2}:\\d{2}:\\d{2} (GMT|UTC)$"
+                    },
+                    {
+                        "name": "x-fapi-customer-ip-address",
+                        "description": "The PSU's IP address if the PSU is currently logged in with the TPP.",
+                        "in": "header",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "x-fapi-interaction-id",
+                        "description": "An RFC4122 UID used as a correlation id.",
+                        "in": "header",
+                        "required": false,
+                        "type": "string"
+                    },
+                    {
+                        "name": "Authorization",
+                        "description": "An Authorisation Token as per https://tools.ietf.org/html/rfc6750",
+                        "in": "header",
+                        "required": true,
+                        "type": "string"
+                    }
+                ],
+                "responses": {
+                    "200": {
+                        "description": "Beneficiaries Read",
+                        "headers": {
+                            "x-fapi-interaction-id": {
+                                "description": "An RFC4122 UID used as a correlation id.",
+                                "type": "string"
+                            }
+                        },
+                        "schema": {
+                            "required": [
+                                "Data"
+                            ],
                             "type": "object",
-                            "description": "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\nThis is the servicer of the beneficiary account.",
                             "properties": {
-                              "SchemeName": {
-                                "description": "Name of the identification scheme, in a coded form as published in an external list.",
-                                "type": "string",
-                                "x-namespaced-enum": [
-                                  "UK.OBIE.BICFI"
-                                ]
-                              },
-                              "Identification": {
-                                "description": "Unique and unambiguous identification of the servicing institution.",
-                                "type": "string",
-                                "minLength": 1,
-                                "maxLength": 35
-                              },
-                              "Name": {
-                                "description": "Name by which an agent is known and which is usually used to identify that agent.",
-                                "type": "string",
-                                "minLength": 1,
-                                "maxLength": 140
-                              },
-                              "PostalAddress": {
-                                "type": "object",
-                                "description": "Information that locates and identifies a specific address, as defined by postal services.",
-                                "properties": {
-                                  "AddressType": {
-                                    "description": "Identifies the nature of the postal address.",
-                                    "type": "string",
-                                    "enum": [
-                                      "Business",
-                                      "Correspondence",
-                                      "DeliveryTo",
-                                      "MailTo",
-                                      "POBox",
-                                      "Postal",
-                                      "Residential",
-                                      "Statement"
-                                    ]
-                                  },
-                                  "Department": {
-                                    "description": "Identification of a division of a large organisation or building.",
-                                    "type": "string",
+                                "Data": {
+                                    "type": "object",
+                                    "properties": {
+                                        "Beneficiary": {
+                                            "type": "array",
+                                            "items": {
+                                                "type": "object",
+                                                "properties": {
+                                                    "AccountId": {
+                                                        "description": "A unique and immutable identifier used to identify the account resource. This identifier has no meaning to the account owner.",
+                                                        "maxLength": 40,
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "BeneficiaryId": {
+                                                        "description": "A unique and immutable identifier used to identify the beneficiary resource. This identifier has no meaning to the account owner.",
+                                                        "maxLength": 40,
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "Reference": {
+                                                        "description": "Unique reference, as assigned by the creditor, to unambiguously refer to the payment transaction.\nUsage: If available, the initiating party should provide this reference in the structured remittance information, to enable reconciliation by the creditor upon receipt of the amount of money.\nIf the business context requires the use of a creditor reference or a payment remit identification, and only one identifier can be passed through the end-to-end chain, the creditor's reference or payment remittance identification should be quoted in the end-to-end transaction identification.",
+                                                        "maxLength": 35,
+                                                        "minLength": 1,
+                                                        "type": "string"
+                                                    },
+                                                    "CreditorAgent": {
+                                                        "description": "Party that manages the account on behalf of the account owner, that is manages the registration and booking of entries on the account, calculates balances on the account and provides information about the account.\nThis is the servicer of the beneficiary account.",
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "SchemeName": {
+                                                                "description": "Name of the identification scheme, in a coded form as published in an external list.",
+                                                                "type": "string",
+                                                                "x-namespaced-enum": [
+                                                                    "UK.OBIE.BICFI"
+                                                                ]
+                                                            },
+                                                            "Identification": {
+                                                                "description": "Unique and unambiguous identification of the servicing institution.",
+                                                                "maxLength": 35,
+                                                                "minLength": 1,
+                                                                "type": "string"
+                                                            },
+                                                            "Name": {
+                                                                "description": "Name by which an agent is known and which is usually used to identify that agent.",
+                                                                "maxLength": 140,
+                                                                "minLength": 1,
+                                                                "type": "string"
+                                                            },
+                                                            "PostalAddress": {
+                                                                "description": "Information that locates and identifies a specific address, as defined by postal services.",
+                                                                "type": "object",
+                                                                "properties": {
+                                                                    "AddressType": {
+                                                                        "description": "Identifies the nature of the postal address.",
+                                                                        "enum": [
+                                                                            "Business",
+                                                                            "Correspondence",
+                                                                            "DeliveryTo",
+                                                                            "MailTo",
+                                                                            "POBox",
+                                                                            "Postal",
+                                                                            "Residential",
+                                                                            "Statement"
+                                                                        ],
+                                                                        "type": "string"
+                                                                    },
+                                                                    "Department": {
+                                                                        "description": "Identification of a division of a large organisation or building.",
+                                                                        "maxLength": 70,
+                                                                        "minLength": 1,
+                                                                        "type": "string"
+                                                                    },
+                                                                    "SubDepartment": {
+                                                                        "description": "Identification of a sub-division of a large organisation or building.",
+                                                                        "maxLength": 70,
+                                                                        "minLength": 1,
+                                                                        "type": "string"
+                                                                    },
+                                                                    "StreetName": {
+                                                                        "description": "Name of a street or thoroughfare.",
+                                                                        "maxLength": 70,
+                                                                        "minLength": 1,
+                                                                        "type": "string"
+                                                                    },
+                                                                    "BuildingNumber": {
+                                                                        "description": "Number that identifies the position of a building on a street.",
+                                                                        "maxLength": 16,
+                                                                        "minLength": 1,
+                                                                        "type": "string"
+                                                                    },
+                                                                    "PostCode": {
+                                                                        "description": "Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.",
+                                                                        "maxLength": 16,
+                                                                        "minLength": 1,
+                                                                        "type": "string"
+                                                                    },
+                                                                    "TownName": {
+                                                                        "description": "Name of a built-up area, with defined boundaries, and a local government.",
+                                                                        "maxLength": 35,
+                                                                        "minLength": 1,
+                                                                        "type": "string"
+                                                                    },
+                                                                    "CountrySubDivision": {
+                                                                        "description": "Identifies a subdivision of a country such as state, region, county.",
+                                                                        "maxLength": 35,
+                                                                        "minLength": 1,
+                                                                        "type": "string"
+                                                                    },
+                                                                    "Country": {
+                                                                        "description": "Nation with its own government.",
+                                                                        "pattern": "^[A-Z]{2,2}$",
+                                                                        "type": "string"
+                                                                    },
+                                                                    "AddressLine": {
+                                                                        "maxItems": 7,
+                                                                        "minItems": 0,
+                                                                        "type": "array",
+                                                                        "items": {
+                                                                            "description": "Information that locates and identifies a specific address, as defined by postal services, presented in free format text.",
+                                                                            "maxLength": 70,
+                                                                            "minLength": 1,
+                                                                            "type": "string"
+                                                                        }
+                                                                    }
+                                                                }
+                                                            }
+                                                        }
+                                                    },
+                                                    "CreditorAccount": {
+                                                        "description": "Provides the details to identify the beneficiary account.",
+                                                        "required": [
+                                                            "SchemeName",
+                                                            "Identification"
+                                                        ],
+                                                        "type": "object",
+                                                        "properties": {
+                                                            "SchemeName": {
+                                                                "description": "Name of the identification scheme, in a coded form as published in an external list.",
+                                                                "type": "string",
+                                                                "x-namespaced-enum": [
+                                                                    "UK.OBIE.BBAN",
+                                                                    "UK.OBIE.IBAN",
+                                                                    "UK.OBIE.PAN",
+                                                                    "UK.OBIE.Paym",
+                                                                    "UK.OBIE.SortCodeAccountNumber"
+                                                                ]
+                                                            },
+                                                            "Identification": {
+                                                                "description": "Identification assigned by an institution to identify an account. This identification is known by the account owner.",
+                                                                "maxLength": 256,
+                                                                "minLength": 1,
+                                                                "type": "string"
+                                                            },
+                                                            "Name": {
+                                                                "description": "The account name is the name or names of the account owner(s) represented at an account level, as displayed by the ASPSP's online channels.\nNote, the account name is not the product name or the nickname of the account.",
+                                                                "maxLength": 70,
+                                                                "minLength": 1,
+                                                                "type": "string"
+                                                            },
+                                                            "SecondaryIdentification": {
+                                                                "description": "This is secondary identification of the account, as assigned by the account servicing institution. \nThis can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).",
+                                                                "maxLength": 34,
+                                                                "minLength": 1,
+                                                                "type": "string"
+                                                            }
+                                                        }
+                                                    }
+                                                }
+                                            }
+                                        }
+                                    }
+                                },
+                                "Links": {
+                                    "description": "Links relevant to the payload",
+                                    "required": [
+                                        "Self"
+                                    ],
+                                    "type": "object",
+                                    "properties": {
+                                        "Self": {
+                                            "format": "uri",
+                                            "type": "string"
+                                        },
+                                        "First": {
+                                            "format": "uri",
+                                            "type": "string"
+                                        },
+                                        "Prev": {
+                                            "format": "uri",
+                                            "type": "string"
+                                        },
+                                        "Next": {
+                                            "format": "uri",
+                                            "type": "string"
+                                        },
+                                        "Last": {
+                                            "format": "uri",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "additionalProperties": false
+                                },
+                                "Meta": {
+                                    "title": "MetaData",
+                                    "description": "Meta Data relevant to the payload",
+                                    "type": "object",
+                                    "properties": {
+                                        "TotalPages": {
+                                            "format": "int32",
+                                            "type": "integer"
+                                        },
+                                        "FirstAvailableDateTime": {
+                                            "format": "date-time",
+                                            "description": "All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+                                            "type": "string"
+                                        },
+                                        "LastAvailableDateTime": {
+                                            "format": "date-time",
+                                            "description": "All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
+                                            "type": "string"
+                                        }
+                                    },
+                                    "additionalProperties": false
+                                }
+                            }
+                        }
+                    },
+                    "400": {
+                        "description": "Bad request",
+                        "headers": {
+                            "x-fapi-interaction-id": {
+                                "description": "An RFC4122 UID used as a correlation id.",
+                                "type": "string"
+                            }
+                        },
+                        "schema": {
+                            "description": "An array of detail error codes, and messages, and URLs to documentation to help remediation.",
+                            "required": [
+                                "Code",
+                                "Message",
+                                "Errors"
+                            ],
+                            "type": "object",
+                            "properties": {
+                                "Code": {
+                                    "description": "High level textual error code, to help categorize the errors.",
+                                    "maxLength": 40,
                                     "minLength": 1,
-                                    "maxLength": 70
-                                  },
-                                  "SubDepartment": {
-                                    "description": "Identification of a sub-division of a large organisation or building.",
-                                    "type": "string",
+                                    "type": "string"
+                                },
+                                "Id": {
+                                    "description": "A unique reference for the error instance, for audit purposes, in case of unknown/unclassified errors.",
+                                    "maxLength": 40,
                                     "minLength": 1,
-                                    "maxLength": 70
-                                  },
-                                  "StreetName": {
-                                    "description": "Name of a street or thoroughfare.",
-                                    "type": "string",
+                                    "type": "string"
+                                },
+                                "Message": {
+                                    "description": "Brief Error message, e.g., 'There is something wrong with the request parameters provided'",
+                                    "maxLength": 500,
                                     "minLength": 1,
-                                    "maxLength": 70
-                                  },
-                                  "BuildingNumber": {
-                                    "description": "Number that identifies the position of a building on a street.",
-                                    "type": "string",
-                                    "minLength": 1,
-                                    "maxLength": 16
-                                  },
-                                  "PostCode": {
-                                    "description": "Identifier consisting of a group of letters and/or numbers that is added to a postal address to assist the sorting of mail.",
-                                    "type": "string",
-                                    "minLength": 1,
-                                    "maxLength": 16
-                                  },
-                                  "TownName": {
-                                    "description": "Name of a built-up area, with defined boundaries, and a local government.",
-                                    "type": "string",
-                                    "minLength": 1,
-                                    "maxLength": 35
-                                  },
-                                  "CountrySubDivision": {
-                                    "description": "Identifies a subdivision of a country such as state, region, county.",
-                                    "type": "string",
-                                    "minLength": 1,
-                                    "maxLength": 35
-                                  },
-                                  "Country": {
-                                    "description": "Nation with its own government.",
-                                    "type": "string",
-                                    "pattern": "^[A-Z]{2,2}$"
-                                  },
-                                  "AddressLine": {
+                                    "type": "string"
+                                },
+                                "Errors": {
+                                    "minItems": 1,
                                     "type": "array",
                                     "items": {
-                                      "description": "Information that locates and identifies a specific address, as defined by postal services, presented in free format text.",
-                                      "type": "string",
-                                      "minLength": 1,
-                                      "maxLength": 70
-                                    },
-                                    "minItems": 0,
-                                    "maxItems": 7
-                                  }
+                                        "minProperties": 1,
+                                        "required": [
+                                            "ErrorCode",
+                                            "Message"
+                                        ],
+                                        "type": "object",
+                                        "properties": {
+                                            "ErrorCode": {
+                                                "description": "Low level textual error code, e.g., UK.OBIE.Field.Missing",
+                                                "type": "string",
+                                                "x-namespaced-enum": [
+                                                    "UK.OBIE.Field.Expected",
+                                                    "UK.OBIE.Field.Invalid",
+                                                    "UK.OBIE.Field.InvalidDate",
+                                                    "UK.OBIE.Field.Missing",
+                                                    "UK.OBIE.Field.Unexpected",
+                                                    "UK.OBIE.Header.Invalid",
+                                                    "UK.OBIE.Header.Missing",
+                                                    "UK.OBIE.Reauthenticate",
+                                                    "UK.OBIE.Resource.ConsentMismatch",
+                                                    "UK.OBIE.Resource.InvalidConsentStatus",
+                                                    "UK.OBIE.Resource.InvalidFormat",
+                                                    "UK.OBIE.Resource.NotFound",
+                                                    "UK.OBIE.Rules.AfterCutOffDateTime",
+                                                    "UK.OBIE.Rules.DuplicateReference",
+                                                    "UK.OBIE.Signature.Invalid",
+                                                    "UK.OBIE.Signature.InvalidClaim",
+                                                    "UK.OBIE.Signature.Malformed",
+                                                    "UK.OBIE.Signature.Missing",
+                                                    "UK.OBIE.Signature.MissingClaim",
+                                                    "UK.OBIE.Signature.Unexpected",
+                                                    "UK.OBIE.UnexpectedError",
+                                                    "UK.OBIE.Unsupported.AccountIdentifier",
+                                                    "UK.OBIE.Unsupported.AccountSecondaryIdentifier",
+                                                    "UK.OBIE.Unsupported.Currency",
+                                                    "UK.OBIE.Unsupported.Frequency",
+                                                    "UK.OBIE.Unsupported.LocalInstrument",
+                                                    "UK.OBIE.Unsupported.Scheme"
+                                                ]
+                                            },
+                                            "Message": {
+                                                "description": "A description of the error that occurred. e.g., 'A mandatory field isn't supplied' or 'RequestedExecutionDateTime must be in future'\nOBIE doesn't standardise this field",
+                                                "maxLength": 500,
+                                                "minLength": 1,
+                                                "type": "string"
+                                            },
+                                            "Path": {
+                                                "description": "Recommended but optional reference to the JSON Path of the field with error, e.g., Data.Initiation.InstructedAmount.Currency",
+                                                "maxLength": 500,
+                                                "minLength": 1,
+                                                "type": "string"
+                                            },
+                                            "Url": {
+                                                "description": "URL to help remediate the problem, or provide more information, or to API Reference, or help etc",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "additionalProperties": false
+                                    }
                                 }
-                              }
-                            }
-                          },
-                          "CreditorAccount": {
-                            "type": "object",
-                            "required": [
-                              "SchemeName",
-                              "Identification"
-                            ],
-                            "description": "Provides the details to identify the beneficiary account.",
-                            "properties": {
-                              "SchemeName": {
-                                "description": "Name of the identification scheme, in a coded form as published in an external list.",
-                                "type": "string",
-                                "x-namespaced-enum": [
-                                  "UK.OBIE.BBAN",
-                                  "UK.OBIE.IBAN",
-                                  "UK.OBIE.PAN",
-                                  "UK.OBIE.Paym",
-                                  "UK.OBIE.SortCodeAccountNumber"
-                                ]
-                              },
-                              "Identification": {
-                                "description": "Identification assigned by an institution to identify an account. This identification is known by the account owner.",
-                                "type": "string",
-                                "minLength": 1,
-                                "maxLength": 256
-                              },
-                              "Name": {
-                                "description": "The account name is the name or names of the account owner(s) represented at an account level, as displayed by the ASPSP's online channels.\nNote, the account name is not the product name or the nickname of the account.",
-                                "type": "string",
-                                "minLength": 1,
-                                "maxLength": 70
-                              },
-                              "SecondaryIdentification": {
-                                "description": "This is secondary identification of the account, as assigned by the account servicing institution. \nThis can be used by building societies to additionally identify accounts with a roll number (in addition to a sort code and account number combination).",
-                                "type": "string",
-                                "minLength": 1,
-                                "maxLength": 34
-                              }
-                            }
-                          }
+                            },
+                            "additionalProperties": false
                         }
-                      }
+                    },
+                    "401": {
+                        "description": "Unauthorized",
+                        "headers": {
+                            "x-fapi-interaction-id": {
+                                "description": "An RFC4122 UID used as a correlation id.",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "403": {
+                        "description": "Forbidden",
+                        "headers": {
+                            "x-fapi-interaction-id": {
+                                "description": "An RFC4122 UID used as a correlation id.",
+                                "type": "string"
+                            }
+                        },
+                        "schema": {
+                            "description": "An array of detail error codes, and messages, and URLs to documentation to help remediation.",
+                            "required": [
+                                "Code",
+                                "Message",
+                                "Errors"
+                            ],
+                            "type": "object",
+                            "properties": {
+                                "Code": {
+                                    "description": "High level textual error code, to help categorize the errors.",
+                                    "maxLength": 40,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "Id": {
+                                    "description": "A unique reference for the error instance, for audit purposes, in case of unknown/unclassified errors.",
+                                    "maxLength": 40,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "Message": {
+                                    "description": "Brief Error message, e.g., 'There is something wrong with the request parameters provided'",
+                                    "maxLength": 500,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "Errors": {
+                                    "minItems": 1,
+                                    "type": "array",
+                                    "items": {
+                                        "minProperties": 1,
+                                        "required": [
+                                            "ErrorCode",
+                                            "Message"
+                                        ],
+                                        "type": "object",
+                                        "properties": {
+                                            "ErrorCode": {
+                                                "description": "Low level textual error code, e.g., UK.OBIE.Field.Missing",
+                                                "type": "string",
+                                                "x-namespaced-enum": [
+                                                    "UK.OBIE.Field.Expected",
+                                                    "UK.OBIE.Field.Invalid",
+                                                    "UK.OBIE.Field.InvalidDate",
+                                                    "UK.OBIE.Field.Missing",
+                                                    "UK.OBIE.Field.Unexpected",
+                                                    "UK.OBIE.Header.Invalid",
+                                                    "UK.OBIE.Header.Missing",
+                                                    "UK.OBIE.Reauthenticate",
+                                                    "UK.OBIE.Resource.ConsentMismatch",
+                                                    "UK.OBIE.Resource.InvalidConsentStatus",
+                                                    "UK.OBIE.Resource.InvalidFormat",
+                                                    "UK.OBIE.Resource.NotFound",
+                                                    "UK.OBIE.Rules.AfterCutOffDateTime",
+                                                    "UK.OBIE.Rules.DuplicateReference",
+                                                    "UK.OBIE.Signature.Invalid",
+                                                    "UK.OBIE.Signature.InvalidClaim",
+                                                    "UK.OBIE.Signature.Malformed",
+                                                    "UK.OBIE.Signature.Missing",
+                                                    "UK.OBIE.Signature.MissingClaim",
+                                                    "UK.OBIE.Signature.Unexpected",
+                                                    "UK.OBIE.UnexpectedError",
+                                                    "UK.OBIE.Unsupported.AccountIdentifier",
+                                                    "UK.OBIE.Unsupported.AccountSecondaryIdentifier",
+                                                    "UK.OBIE.Unsupported.Currency",
+                                                    "UK.OBIE.Unsupported.Frequency",
+                                                    "UK.OBIE.Unsupported.LocalInstrument",
+                                                    "UK.OBIE.Unsupported.Scheme"
+                                                ]
+                                            },
+                                            "Message": {
+                                                "description": "A description of the error that occurred. e.g., 'A mandatory field isn't supplied' or 'RequestedExecutionDateTime must be in future'\nOBIE doesn't standardise this field",
+                                                "maxLength": 500,
+                                                "minLength": 1,
+                                                "type": "string"
+                                            },
+                                            "Path": {
+                                                "description": "Recommended but optional reference to the JSON Path of the field with error, e.g., Data.Initiation.InstructedAmount.Currency",
+                                                "maxLength": 500,
+                                                "minLength": 1,
+                                                "type": "string"
+                                            },
+                                            "Url": {
+                                                "description": "URL to help remediate the problem, or provide more information, or to API Reference, or help etc",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "additionalProperties": false
+                                    }
+                                }
+                            },
+                            "additionalProperties": false
+                        }
+                    },
+                    "404": {
+                        "description": "Not found",
+                        "headers": {
+                            "x-fapi-interaction-id": {
+                                "description": "An RFC4122 UID used as a correlation id.",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "405": {
+                        "description": "Method Not Allowed",
+                        "headers": {
+                            "x-fapi-interaction-id": {
+                                "description": "An RFC4122 UID used as a correlation id.",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "406": {
+                        "description": "Not Acceptable",
+                        "headers": {
+                            "x-fapi-interaction-id": {
+                                "description": "An RFC4122 UID used as a correlation id.",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "429": {
+                        "description": "Too Many Requests",
+                        "headers": {
+                            "Retry-After": {
+                                "description": "Number in seconds to wait",
+                                "type": "integer"
+                            },
+                            "x-fapi-interaction-id": {
+                                "description": "An RFC4122 UID used as a correlation id.",
+                                "type": "string"
+                            }
+                        }
+                    },
+                    "500": {
+                        "description": "Internal Server Error",
+                        "headers": {
+                            "x-fapi-interaction-id": {
+                                "description": "An RFC4122 UID used as a correlation id.",
+                                "type": "string"
+                            }
+                        },
+                        "schema": {
+                            "description": "An array of detail error codes, and messages, and URLs to documentation to help remediation.",
+                            "required": [
+                                "Code",
+                                "Message",
+                                "Errors"
+                            ],
+                            "type": "object",
+                            "properties": {
+                                "Code": {
+                                    "description": "High level textual error code, to help categorize the errors.",
+                                    "maxLength": 40,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "Id": {
+                                    "description": "A unique reference for the error instance, for audit purposes, in case of unknown/unclassified errors.",
+                                    "maxLength": 40,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "Message": {
+                                    "description": "Brief Error message, e.g., 'There is something wrong with the request parameters provided'",
+                                    "maxLength": 500,
+                                    "minLength": 1,
+                                    "type": "string"
+                                },
+                                "Errors": {
+                                    "minItems": 1,
+                                    "type": "array",
+                                    "items": {
+                                        "minProperties": 1,
+                                        "required": [
+                                            "ErrorCode",
+                                            "Message"
+                                        ],
+                                        "type": "object",
+                                        "properties": {
+                                            "ErrorCode": {
+                                                "description": "Low level textual error code, e.g., UK.OBIE.Field.Missing",
+                                                "type": "string",
+                                                "x-namespaced-enum": [
+                                                    "UK.OBIE.Field.Expected",
+                                                    "UK.OBIE.Field.Invalid",
+                                                    "UK.OBIE.Field.InvalidDate",
+                                                    "UK.OBIE.Field.Missing",
+                                                    "UK.OBIE.Field.Unexpected",
+                                                    "UK.OBIE.Header.Invalid",
+                                                    "UK.OBIE.Header.Missing",
+                                                    "UK.OBIE.Reauthenticate",
+                                                    "UK.OBIE.Resource.ConsentMismatch",
+                                                    "UK.OBIE.Resource.InvalidConsentStatus",
+                                                    "UK.OBIE.Resource.InvalidFormat",
+                                                    "UK.OBIE.Resource.NotFound",
+                                                    "UK.OBIE.Rules.AfterCutOffDateTime",
+                                                    "UK.OBIE.Rules.DuplicateReference",
+                                                    "UK.OBIE.Signature.Invalid",
+                                                    "UK.OBIE.Signature.InvalidClaim",
+                                                    "UK.OBIE.Signature.Malformed",
+                                                    "UK.OBIE.Signature.Missing",
+                                                    "UK.OBIE.Signature.MissingClaim",
+                                                    "UK.OBIE.Signature.Unexpected",
+                                                    "UK.OBIE.UnexpectedError",
+                                                    "UK.OBIE.Unsupported.AccountIdentifier",
+                                                    "UK.OBIE.Unsupported.AccountSecondaryIdentifier",
+                                                    "UK.OBIE.Unsupported.Currency",
+                                                    "UK.OBIE.Unsupported.Frequency",
+                                                    "UK.OBIE.Unsupported.LocalInstrument",
+                                                    "UK.OBIE.Unsupported.Scheme"
+                                                ]
+                                            },
+                                            "Message": {
+                                                "description": "A description of the error that occurred. e.g., 'A mandatory field isn't supplied' or 'RequestedExecutionDateTime must be in future'\nOBIE doesn't standardise this field",
+                                                "maxLength": 500,
+                                                "minLength": 1,
+                                                "type": "string"
+                                            },
+                                            "Path": {
+                                                "description": "Recommended but optional reference to the JSON Path of the field with error, e.g., Data.Initiation.InstructedAmount.Currency",
+                                                "maxLength": 500,
+                                                "minLength": 1,
+                                                "type": "string"
+                                            },
+                                            "Url": {
+                                                "description": "URL to help remediate the problem, or provide more information, or to API Reference, or help etc",
+                                                "type": "string"
+                                            }
+                                        },
+                                        "additionalProperties": false
+                                    }
+                                }
+                            },
+                            "additionalProperties": false
+                        }
                     }
-                  }
                 },
-                "Links": {
-                  "type": "object",
-                  "description": "Links relevant to the payload",
-                  "properties": {
-                    "Self": {
-                      "type": "string",
-                      "format": "uri"
-                    },
-                    "First": {
-                      "type": "string",
-                      "format": "uri"
-                    },
-                    "Prev": {
-                      "type": "string",
-                      "format": "uri"
-                    },
-                    "Next": {
-                      "type": "string",
-                      "format": "uri"
-                    },
-                    "Last": {
-                      "type": "string",
-                      "format": "uri"
-                    }
-                  },
-                  "additionalProperties": false,
-                  "required": [
-                    "Self"
-                  ]
-                },
-                "Meta": {
-                  "title": "MetaData",
-                  "type": "object",
-                  "description": "Meta Data relevant to the payload",
-                  "properties": {
-                    "TotalPages": {
-                      "type": "integer",
-                      "format": "int32"
-                    },
-                    "FirstAvailableDateTime": {
-                      "description": "All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
-                      "type": "string",
-                      "format": "date-time"
-                    },
-                    "LastAvailableDateTime": {
-                      "description": "All dates in the JSON payloads are represented in ISO 8601 date-time format. \nAll date-time fields in responses must include the timezone. An example is below:\n2017-04-05T10:43:07+00:00",
-                      "type": "string",
-                      "format": "date-time"
-                    }
-                  },
-                  "additionalProperties": false
-                }
-              }
+                "operationId": "GetAccountsAccountIdBeneficiaries",
+                "summary": "Get Beneficiaries"
             }
-          },
-          "400": {
-            "description": "Bad request",
-            "headers": {
-              "x-fapi-interaction-id": {
-                "type": "string",
-                "description": "An RFC4122 UID used as a correlation id."
-              }
-            },
-            "schema": {
-              "description": "An array of detail error codes, and messages, and URLs to documentation to help remediation.",
-              "type": "object",
-              "properties": {
-                "Code": {
-                  "description": "High level textual error code, to help categorize the errors.",
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 40
-                },
-                "Id": {
-                  "description": "A unique reference for the error instance, for audit purposes, in case of unknown/unclassified errors.",
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 40
-                },
-                "Message": {
-                  "description": "Brief Error message, e.g., 'There is something wrong with the request parameters provided'",
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 500
-                },
-                "Errors": {
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "ErrorCode": {
-                        "description": "Low level textual error code, e.g., UK.OBIE.Field.Missing",
-                        "type": "string",
-                        "x-namespaced-enum": [
-                          "UK.OBIE.Field.Expected",
-                          "UK.OBIE.Field.Invalid",
-                          "UK.OBIE.Field.InvalidDate",
-                          "UK.OBIE.Field.Missing",
-                          "UK.OBIE.Field.Unexpected",
-                          "UK.OBIE.Header.Invalid",
-                          "UK.OBIE.Header.Missing",
-                          "UK.OBIE.Reauthenticate",
-                          "UK.OBIE.Resource.ConsentMismatch",
-                          "UK.OBIE.Resource.InvalidConsentStatus",
-                          "UK.OBIE.Resource.InvalidFormat",
-                          "UK.OBIE.Resource.NotFound",
-                          "UK.OBIE.Rules.AfterCutOffDateTime",
-                          "UK.OBIE.Rules.DuplicateReference",
-                          "UK.OBIE.Signature.Invalid",
-                          "UK.OBIE.Signature.InvalidClaim",
-                          "UK.OBIE.Signature.Malformed",
-                          "UK.OBIE.Signature.Missing",
-                          "UK.OBIE.Signature.MissingClaim",
-                          "UK.OBIE.Signature.Unexpected",
-                          "UK.OBIE.UnexpectedError",
-                          "UK.OBIE.Unsupported.AccountIdentifier",
-                          "UK.OBIE.Unsupported.AccountSecondaryIdentifier",
-                          "UK.OBIE.Unsupported.Currency",
-                          "UK.OBIE.Unsupported.Frequency",
-                          "UK.OBIE.Unsupported.LocalInstrument",
-                          "UK.OBIE.Unsupported.Scheme"
-                        ]
-                      },
-                      "Message": {
-                        "description": "A description of the error that occurred. e.g., 'A mandatory field isn't supplied' or 'RequestedExecutionDateTime must be in future'\nOBIE doesn't standardise this field",
-                        "type": "string",
-                        "minLength": 1,
-                        "maxLength": 500
-                      },
-                      "Path": {
-                        "description": "Recommended but optional reference to the JSON Path of the field with error, e.g., Data.Initiation.InstructedAmount.Currency",
-                        "type": "string",
-                        "minLength": 1,
-                        "maxLength": 500
-                      },
-                      "Url": {
-                        "description": "URL to help remediate the problem, or provide more information, or to API Reference, or help etc",
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "ErrorCode",
-                      "Message"
-                    ],
-                    "additionalProperties": false,
-                    "minProperties": 1
-                  },
-                  "type": "array",
-                  "minItems": 1
-                }
-              },
-              "required": [
-                "Code",
-                "Message",
-                "Errors"
-              ],
-              "additionalProperties": false
-            }
-          },
-          "401": {
-            "description": "Unauthorized",
-            "headers": {
-              "x-fapi-interaction-id": {
-                "type": "string",
-                "description": "An RFC4122 UID used as a correlation id."
-              }
-            }
-          },
-          "403": {
-            "description": "Forbidden",
-            "headers": {
-              "x-fapi-interaction-id": {
-                "type": "string",
-                "description": "An RFC4122 UID used as a correlation id."
-              }
-            },
-            "schema": {
-              "description": "An array of detail error codes, and messages, and URLs to documentation to help remediation.",
-              "type": "object",
-              "properties": {
-                "Code": {
-                  "description": "High level textual error code, to help categorize the errors.",
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 40
-                },
-                "Id": {
-                  "description": "A unique reference for the error instance, for audit purposes, in case of unknown/unclassified errors.",
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 40
-                },
-                "Message": {
-                  "description": "Brief Error message, e.g., 'There is something wrong with the request parameters provided'",
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 500
-                },
-                "Errors": {
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "ErrorCode": {
-                        "description": "Low level textual error code, e.g., UK.OBIE.Field.Missing",
-                        "type": "string",
-                        "x-namespaced-enum": [
-                          "UK.OBIE.Field.Expected",
-                          "UK.OBIE.Field.Invalid",
-                          "UK.OBIE.Field.InvalidDate",
-                          "UK.OBIE.Field.Missing",
-                          "UK.OBIE.Field.Unexpected",
-                          "UK.OBIE.Header.Invalid",
-                          "UK.OBIE.Header.Missing",
-                          "UK.OBIE.Reauthenticate",
-                          "UK.OBIE.Resource.ConsentMismatch",
-                          "UK.OBIE.Resource.InvalidConsentStatus",
-                          "UK.OBIE.Resource.InvalidFormat",
-                          "UK.OBIE.Resource.NotFound",
-                          "UK.OBIE.Rules.AfterCutOffDateTime",
-                          "UK.OBIE.Rules.DuplicateReference",
-                          "UK.OBIE.Signature.Invalid",
-                          "UK.OBIE.Signature.InvalidClaim",
-                          "UK.OBIE.Signature.Malformed",
-                          "UK.OBIE.Signature.Missing",
-                          "UK.OBIE.Signature.MissingClaim",
-                          "UK.OBIE.Signature.Unexpected",
-                          "UK.OBIE.UnexpectedError",
-                          "UK.OBIE.Unsupported.AccountIdentifier",
-                          "UK.OBIE.Unsupported.AccountSecondaryIdentifier",
-                          "UK.OBIE.Unsupported.Currency",
-                          "UK.OBIE.Unsupported.Frequency",
-                          "UK.OBIE.Unsupported.LocalInstrument",
-                          "UK.OBIE.Unsupported.Scheme"
-                        ]
-                      },
-                      "Message": {
-                        "description": "A description of the error that occurred. e.g., 'A mandatory field isn't supplied' or 'RequestedExecutionDateTime must be in future'\nOBIE doesn't standardise this field",
-                        "type": "string",
-                        "minLength": 1,
-                        "maxLength": 500
-                      },
-                      "Path": {
-                        "description": "Recommended but optional reference to the JSON Path of the field with error, e.g., Data.Initiation.InstructedAmount.Currency",
-                        "type": "string",
-                        "minLength": 1,
-                        "maxLength": 500
-                      },
-                      "Url": {
-                        "description": "URL to help remediate the problem, or provide more information, or to API Reference, or help etc",
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "ErrorCode",
-                      "Message"
-                    ],
-                    "additionalProperties": false,
-                    "minProperties": 1
-                  },
-                  "type": "array",
-                  "minItems": 1
-                }
-              },
-              "required": [
-                "Code",
-                "Message",
-                "Errors"
-              ],
-              "additionalProperties": false
-            }
-          },
-          "404": {
-            "description": "Not found",
-            "headers": {
-              "x-fapi-interaction-id": {
-                "type": "string",
-                "description": "An RFC4122 UID used as a correlation id."
-              }
-            }
-          },
-          "405": {
-            "description": "Method Not Allowed",
-            "headers": {
-              "x-fapi-interaction-id": {
-                "type": "string",
-                "description": "An RFC4122 UID used as a correlation id."
-              }
-            }
-          },
-          "406": {
-            "description": "Not Acceptable",
-            "headers": {
-              "x-fapi-interaction-id": {
-                "type": "string",
-                "description": "An RFC4122 UID used as a correlation id."
-              }
-            }
-          },
-          "429": {
-            "description": "Too Many Requests",
-            "headers": {
-              "Retry-After": {
-                "description": "Number in seconds to wait",
-                "type": "integer"
-              },
-              "x-fapi-interaction-id": {
-                "type": "string",
-                "description": "An RFC4122 UID used as a correlation id."
-              }
-            }
-          },
-          "500": {
-            "description": "Internal Server Error",
-            "headers": {
-              "x-fapi-interaction-id": {
-                "type": "string",
-                "description": "An RFC4122 UID used as a correlation id."
-              }
-            },
-            "schema": {
-              "description": "An array of detail error codes, and messages, and URLs to documentation to help remediation.",
-              "type": "object",
-              "properties": {
-                "Code": {
-                  "description": "High level textual error code, to help categorize the errors.",
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 40
-                },
-                "Id": {
-                  "description": "A unique reference for the error instance, for audit purposes, in case of unknown/unclassified errors.",
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 40
-                },
-                "Message": {
-                  "description": "Brief Error message, e.g., 'There is something wrong with the request parameters provided'",
-                  "type": "string",
-                  "minLength": 1,
-                  "maxLength": 500
-                },
-                "Errors": {
-                  "items": {
-                    "type": "object",
-                    "properties": {
-                      "ErrorCode": {
-                        "description": "Low level textual error code, e.g., UK.OBIE.Field.Missing",
-                        "type": "string",
-                        "x-namespaced-enum": [
-                          "UK.OBIE.Field.Expected",
-                          "UK.OBIE.Field.Invalid",
-                          "UK.OBIE.Field.InvalidDate",
-                          "UK.OBIE.Field.Missing",
-                          "UK.OBIE.Field.Unexpected",
-                          "UK.OBIE.Header.Invalid",
-                          "UK.OBIE.Header.Missing",
-                          "UK.OBIE.Reauthenticate",
-                          "UK.OBIE.Resource.ConsentMismatch",
-                          "UK.OBIE.Resource.InvalidConsentStatus",
-                          "UK.OBIE.Resource.InvalidFormat",
-                          "UK.OBIE.Resource.NotFound",
-                          "UK.OBIE.Rules.AfterCutOffDateTime",
-                          "UK.OBIE.Rules.DuplicateReference",
-                          "UK.OBIE.Signature.Invalid",
-                          "UK.OBIE.Signature.InvalidClaim",
-                          "UK.OBIE.Signature.Malformed",
-                          "UK.OBIE.Signature.Missing",
-                          "UK.OBIE.Signature.MissingClaim",
-                          "UK.OBIE.Signature.Unexpected",
-                          "UK.OBIE.UnexpectedError",
-                          "UK.OBIE.Unsupported.AccountIdentifier",
-                          "UK.OBIE.Unsupported.AccountSecondaryIdentifier",
-                          "UK.OBIE.Unsupported.Currency",
-                          "UK.OBIE.Unsupported.Frequency",
-                          "UK.OBIE.Unsupported.LocalInstrument",
-                          "UK.OBIE.Unsupported.Scheme"
-                        ]
-                      },
-                      "Message": {
-                        "description": "A description of the error that occurred. e.g., 'A mandatory field isn't supplied' or 'RequestedExecutionDateTime must be in future'\nOBIE doesn't standardise this field",
-                        "type": "string",
-                        "minLength": 1,
-                        "maxLength": 500
-                      },
-                      "Path": {
-                        "description": "Recommended but optional reference to the JSON Path of the field with error, e.g., Data.Initiation.InstructedAmount.Currency",
-                        "type": "string",
-                        "minLength": 1,
-                        "maxLength": 500
-                      },
-                      "Url": {
-                        "description": "URL to help remediate the problem, or provide more information, or to API Reference, or help etc",
-                        "type": "string"
-                      }
-                    },
-                    "required": [
-                      "ErrorCode",
-                      "Message"
-                    ],
-                    "additionalProperties": false,
-                    "minProperties": 1
-                  },
-                  "type": "array",
-                  "minItems": 1
-                }
-              },
-              "required": [
-                "Code",
-                "Message",
-                "Errors"
-              ],
-              "additionalProperties": false
-            }
-          }
         }
-      }
     }
-  }
 }
