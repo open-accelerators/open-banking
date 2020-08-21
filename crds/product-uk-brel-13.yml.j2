@@ -1,0 +1,46 @@
+---
+apiVersion: capabilities.3scale.net/v1beta1
+kind: Product
+metadata:
+  name: product-uk-brel-13
+  namespace: "{{ obsandbox_namespace }}"
+  labels:
+    api: uk-brel-13
+spec:
+  name: Branch Locator API
+  providerAccountRef:
+    name: "{{ obsandbox_3scale_tenant_provider_account_ref }}"
+  systemName: product_uk_brel_13
+  description: UK Open Data Branch Locator v1.3 API
+  deployment:
+    apicastHosted:
+      authentication:
+        userkey:
+          authUserKey: User-Key
+          credentials: headers
+  backendUsages:
+    backend_uk_brel_13:
+      path: /
+  applicationPlans:
+    freetier:
+      name: "Free Tier"
+      appsRequireApproval: false
+      limits:
+        - period: minute
+          value: 60
+          metricMethodRef:
+            systemName: hits
+  methods:
+    get_branches:
+      friendlyName: Get Branches
+    head_branches:
+      friendlyName: Head Branches
+  mappingRules:
+    - httpMethod: GET
+      increment: 1
+      metricMethodRef: get_branches
+      pattern: /branches
+    - httpMethod: HEAD
+      increment: 1
+      metricMethodRef: head_branches
+      pattern: /branches

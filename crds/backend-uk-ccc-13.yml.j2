@@ -1,0 +1,18 @@
+---
+apiVersion: capabilities.3scale.net/v1beta1
+kind: Backend
+metadata:
+  name: backend-uk-ccc-13
+  namespace: "{{ obsandbox_namespace }}"
+  labels:
+    api: uk-ccc-13
+spec:
+  name: Credit Card Backend
+  systemName: backend_uk_ccc_13
+  description: >-
+    UK Open Data SME Commercial Credit Card v1.3 backend referring to Mock endpoint provided
+    by Microcks on the 2d0b cluster.
+  providerAccountRef:
+    name: "{{ obsandbox_3scale_tenant_provider_account_ref }}"
+  privateBaseURL: >-
+    {{ _mock_base_url }}/uk-commercial-credit-card-data-collection/3

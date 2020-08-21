@@ -1,0 +1,46 @@
+---
+apiVersion: capabilities.3scale.net/v1beta1
+kind: Product
+metadata:
+  name: product-uk-bca-13
+  namespace: "{{ obsandbox_namespace }}"
+  labels:
+    api: uk-bca-13
+spec:
+  name: Business Current Account API
+  providerAccountRef:
+    name: "{{ obsandbox_3scale_tenant_provider_account_ref }}"
+  systemName: product_uk_bca_13
+  description: UK Open Data Business Current Account v1.3 API
+  deployment:
+    apicastHosted:
+      authentication:
+        userkey:
+          authUserKey: User-Key
+          credentials: headers
+  backendUsages:
+    backend_uk_bca_13:
+      path: /
+  applicationPlans:
+    freetier:
+      name: "Free Tier"
+      appsRequireApproval: false
+      limits:
+        - period: minute
+          value: 60
+          metricMethodRef:
+            systemName: hits
+  methods:
+    get_bca:
+      friendlyName: Get Business Current Accounts
+    head_bca:
+      friendlyName: Head Business Current Accounts
+  mappingRules:
+    - httpMethod: GET
+      increment: 1
+      metricMethodRef: get_bca
+      pattern: /business-current-accounts
+    - httpMethod: HEAD
+      increment: 1
+      metricMethodRef: head_bca
+      pattern: /business-current-accounts
