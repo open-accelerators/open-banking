@@ -3143,8 +3143,10 @@ a.light-cta.external-link:after {
 @media (min-width:1024px) {
   .assembly .field--name-field-title,
   .assembly .header {
-    font-size: 36px;
-    font-weight: 700
+    font-family: RedHatDisplay,Overpass,Helvetica,Arial,sans-serif;
+    font-size: 28px;
+    font-weight: var(--rhd-global--FontWeight-Display--medium);
+    line-height: 37px;
   }
 }
 
@@ -4885,7 +4887,7 @@ a.light-cta.external-link:after {
 
 @media (min-width:1024px) {
   .assembly-type-rich_text_columns .field--name-field-columns {
-    grid-template-columns: repeat(4, 1fr)
+    grid-template-columns: repeat(3, 1fr)
   }
 }
 
