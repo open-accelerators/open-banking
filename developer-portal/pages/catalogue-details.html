@@ -14,23 +14,29 @@
 {% assign uri = request.request_uri | split: 'node=' %}
 {% assign node = uri[1] %}
 {% assign service = provider.services[node] %}  
+{% assign spec = service.api_specs.first %}
 
 {% for item in current_account.applications %}
   {% if item.service.id == service.id %}
+	{% assign sevID = item.service.id %}
     {% assign application = item %}
     {% assign key = application.user_key' %}
   {% endif %}
 {% endfor %}
 
 <div class="container">
-  <h1><span class="field field--name-title field--type-string field--label-hidden">Catalogue Details</span></h1>
+  <h1><span class="field field--name-title field--type-string field--label-hidden">Catalog Details</span></h1>
 </div>
 
 <div class="node__content">
 <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__items">
-  <div class="field__item">    
+  <div class="field__item">   
+    <p> Value of item.service.id </p>
+    <p> <code>{{sevID}}</code></p>
     <p>You are able to work with this API and excerise it's methods with the back end mock data. For your convenience the configured security profile is based on user key versus OIDC. This is to make it easier to rapidly experiment with the APIs without having to generate a new token per session. Applying the security profile in production would not be appropriate. </p>
+    
     <p>A key has been generated for your account to access this API. Setting the <code>user-key</code> header with <code>{{key}}</code> value will enable you to access this API. </p>
+   
   </div>
 </div>
   
@@ -44,20 +50,27 @@
   
 <script type="text/javascript">
   window.onload = function() {
+{% comment %}
     let found;
     $.getJSON( "/config.json", function( configurations ) {  
       configurations.forEach(function (configuration) {
-        if (configuration.id == '{{service.id}}') {
+        if (configuration.system_name == '{{service.system_name}}') {
           found = configuration;
-        }
+        } 
       });
     }); 
-  
-    let url = '{{ service.api_specs.first.url }}';
+{% endcomment %}  	
+    let url = '{{ spec.url }}';
     SwaggerClient.http.withCredentials = true;
     var swaggerClient = new SwaggerClient(url).then(function(result) {
+{% comment %}
+      if(found == null ){
+        console.log("Found is Null");
+        alert("Not Available.  Go Bank");
+      }
+{% endcomment %}
 
-      result.spec.host = found.sandbox;
+      result.spec.host = '{{ spec.api_product_production_public_base_url | remove: "https://" | replace: "apicast-production", "apicast-staging" }}';
       
       const ui = SwaggerUIBundle({
         spec: result.spec,
@@ -82,7 +95,7 @@
           <div class="clearfix text-formatted field field--name-field-cta-content field--type-text-long field--label-hidden field__items">
             <div class="field__item">
               <p class="text-align-center" dir="ltr"></p>
-              Take our sandbox with you and apply your brand and data. <br/>We wil; host it for you if you want. 
+              Take our sandbox with you and apply your brand and data. <br/>We will host it for you if you want. 
             </div>
           </div>
           <a href="https://www.redhat.com/en/contact" class="button heavy-cta">Connect with us</a>
