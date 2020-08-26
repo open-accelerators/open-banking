@@ -1,9 +1,0 @@
-[{
-	"id": 7,
-	"sandbox": "uk-personal-current-account-data-sandbox.3amp.provoli.openshiftapps.com:443",
-	"production": "uk-personal-current-account-data.3amp.provoli.openshiftapps.com:443"
-}, {
-	"id": 6,
-	"sandbox": "uk-branch-data-sandbox.3amp.provoli.openshiftapps.com:443",
-	"production": "uk-branch-data.3amp.provoli.openshiftapps.com:443"
-}]

@@ -38,7 +38,7 @@
 @font-face {
   font-family: "RedHatText";
   src: url("https://static.redhat.com/libs/redhat/redhat-font/2/webfonts/RedHatText/RedHatText-Medium.eot");
-  src: url("https://static.redhat.com/libs/redhat/redhat-font/2/webfonts/RedHatText/RedHatText-Medium.eot?#iefix") format("embedded-opentype"),url("https://static.redhat.com/libs/redhat/redhat-font/2/webfonts/RedHatText/RedHatText-Medium.woff") format("woff"),url("https://static.redhat.com/libs/redhat/redhat-font/2/webfonts/RedHatText/RedHatText-Medium.svg#RedHatDisplay-Medium") format("svg");
+  src: url("/webfonts/RedHatText-Medium.eot") format("embedded-opentype"),url("/webfonts/RedHatText-Medium.woff") format("woff"),url("https://static.redhat.com/libs/redhat/redhat-font/2/webfonts/RedHatText/RedHatText-Medium.svg#RedHatDisplay-Medium") format("svg");
   font-style: "normal";
   font-weight: 700;
   text-rendering:optimizeLegibility}
