@@ -2,138 +2,10 @@
 <html class="" lang="en" dir="ltr">
 <head>
     <title>Log In | Red Hat Open Banking Sandbox</title>
-    <script type="text/javascript">
-        function faddo(dd, upi) {
-            dd.page.category.subCategories.push("rhd");
-            dd.page.category.subCategories.push("rhdmin");
-        };
-    </script>
-<script type="text/javascript">
-
-    var digitalData = {
-      page: {
-        attributes: {
-          queryParameters: []
-        },
-        category: {
-          contentType: "",
-          contentSubType: "",
-          keyPage: false,
-          keyPageType: "",
-          pageType: "IDM",
-          primaryCategory: "auth",
-          subCategories: []
-        },
-        pageInfo: {
-          breadCrumbs: [],
-          cms: "idm ${project.version}",
-          destinationURL: "",
-          errorMessage: "",
-          errorType: "",
-          language: "en",
-          pageID: "",
-          pageName: "",
-          referringDomain: "",
-          referringURL: "",
-          syndicationIds: [],
-          sysEnv: "desktop",
-          title: ""
-        }
-      },
-      user: [{
-        profile: [{
-          profileInfo: {
-            accountID: "",
-            daysSinceLastPurchase: "",
-            daysSinceRegistration: "",
-            eloquGUID: "",
-            keyCloakID: "",
-            loggedIn: false,
-            profileID: "",
-            registered: false,
-            socialAccountsLinked: [],
-            subscriptionFrequency: "",
-            subscriptionLevel: "",
-            userAgent: ""
-          }
-        }]
-      }]
-    };
-
-    ( function( w, d, dd, undefined ) {
-    
-      function getCookie( name ) {
-        var value = "; " + document.cookie;
-        var parts = value.split( "; " + name + "=" );
-        if ( parts.length == 2 ) {
-          return parts.pop().split( ";" ).shift();
-        }
-      }
-      
-      function getCategories() {
-        var relURL = w.location.pathname; 
-        var categories = { primaryCategory: "", subCategories: [] },
-          url = relURL.split('?')[0].split('#')[0].split(/\//);
-        for(var i=1, l=url.length; i<l; i++) {
-          if (i !== 1 && i <= 4) {
-            categories.subCategories.push(url[i]);
-          }
-          if (i === 1) {
-            categories.primaryCategory = url[i].length > 0 ? url[i] : "root";
-          }
-        }
-        return categories;
-      }
-      
-      function getQueryParams() {
-        return w.location.href.split('?')[1] ? w.location.href.split('?')[1].replace(/=/g,':').split('&') : "";
-      }
-           
-      dd.page.attributes.queryParameters = getQueryParams();
-      var categoryObj = getCategories();
-      dd.page.category.primaryCategory = categoryObj.primaryCategory;
-      dd.page.pageInfo.destinationURL = w.location.href;
-      dd.page.pageInfo.pageID = "login.ftl"; 
-      dd.page.pageInfo.pageName = d.title.split("|")[0].trim();
-      dd.page.pageInfo.title = d.title.trim();
-
-      if ( d.referrer ) {
-        var a = d.createElement("a");
-        a.href = d.referrer;
-        dd.page.pageInfo.referringDomain = a.hostname;
-        dd.page.pageInfo.referringURL = a.href;
-      }
-      dd.page.pageInfo.sysEnv = ( w.innerWidth <= 768 ) ? "tablet" : "desktop";
-      var elqGUID = getCookie( "rh_elqCustomerGUID" );
-      
-      var upi = dd.user[ 0 ].profile[ 0 ].profileInfo; 
-      
-      if (elqGUID) {
-        upi.eloquaGUID = elqGUID;
-      }
-      
-      if(w.navigator){
-        upi.userAgent = w.navigator.userAgent;
-      }
-      
-      faddo(dd, upi);
-            
-    } )( window, document, digitalData );
-    
-</script> 
 
 <meta name="robots" content="noindex, nofollow">
 <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 <meta charset="utf-8">
-<meta name="viewport" content="width=device-width, initial-scale=1.0">
-<meta property="og:type" content="website">
-<!-- <meta property="og:url" content="https://redhat.com/"> -->
-<meta property="og:determiner" content="the">
-<meta property="og:site_name" content="Red Hat">
-<meta property="og:title" content="Red Hat">
-
-
-<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 <link rel="stylesheet" media="all" href="/css/developers-theme-1.css"  type="text/css" />
 <link rel="stylesheet" media="all" href="https://static.redhat.com/libs/redhat/redhat-theme/2/advanced-theme.css"  type="text/css" />
 <link rel="stylesheet" media="all" href="/css/developers-theme-2.css" type="text/css" />
@@ -189,7 +61,15 @@
     } );
 </script>
   <script src="/javascripts/login-account-20200710.js" type="text/javascript"></script>
-  </head>
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-37ML3DL4HN"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag(){dataLayer.push(arguments);}
+    gtag('js', new Date());
+  
+    gtag('config', 'G-37ML3DL4HN');
+  </script>
+</head>
 
 <body class="home  page">
 <a href="#main-content" class="visually-hidden focusable skip-link">
