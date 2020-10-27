@@ -3,7 +3,7 @@ apiVersion: capabilities.3scale.net/v1beta1
 kind: Backend
 metadata:
   name: backend-uk-bca-13
-  namespace: "{{ obsandbox_3scale_namespace }}"
+  namespace: "%NAMESPACE%"
   labels:
     api: uk-bca-13
 spec:
@@ -13,6 +13,6 @@ spec:
     UK Open Data Business Current Account v1.3 backend referring to Mock endpoint provided
     by Microcks on the 2d0b cluster.
   providerAccountRef:
-    name: "{{ obsandbox_3scale_tenant_provider_account_ref }}"
+    name: "%PROVIDER_ACCOUNT_REF%"
   privateBaseURL: >-
-    {{ _mock_base_url }}/uk-business-current-account-data-collection/1
+    %PRIVATE_BASE_URL%/uk-business-current-account-data-collection/1

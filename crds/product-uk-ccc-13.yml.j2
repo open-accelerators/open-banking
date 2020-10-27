@@ -3,13 +3,13 @@ apiVersion: capabilities.3scale.net/v1beta1
 kind: Product
 metadata:
   name: product-uk-ccc-13
-  namespace: "{{ obsandbox_3scale_namespace }}"
+  namespace: "%NAMESPACE%"
   labels:
     api: uk-ccc-13
 spec:
   name: Commercial Credit Card API
   providerAccountRef:
-    name: "{{ obsandbox_3scale_tenant_provider_account_ref }}"
+    name: "%PROVIDER_ACCOUNT_REF%"
   systemName: product_uk_ccc_13
   description: UK Open Data Commercial Credit Card v1.3 API
   deployment:
