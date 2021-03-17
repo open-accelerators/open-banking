@@ -6,6 +6,8 @@ Open Banking has captured the imagination of digital leaders and is emopowering 
 
 Create an ecosystem, connect with your customers or simply make it easier to partner with you. The objective of this project is to provide a an accelerator for open banking that is based on open source technology.
 
+![Architecture Overview](./images/fsi-open-api-architecture.png)
+
 The accelerator provides a lightly branded developer portal based on the porta project
 https://github.com/3scale/porta
 
@@ -15,6 +17,10 @@ http://microcks.github.io/
 The content and code from the United Kingdom is publicly available at both their developer zone site, which is located at https://openbanking.atlassian.net/wiki/spaces/DZ/overview. You can find additional information on GitHub.
 
 New specifications may be introduced in the future and existing specifications will be updated periodically. Individuals are welcome to contribute.
+
+## Overview video
+
+<iframe width="560" height="315" src="https://www.youtube.com/embed/SrZHoGS8Lk4" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 
 ## Contributing
 
