@@ -22,7 +22,7 @@ New specifications may be introduced in the future and existing specifications w
 
 This video illustrates the capabilities included in the Red Hat FSI Open API sandbox, a solution approach to explore the aspects of digital ecosystems in Financial Services & Insurance.
 
-[![Red Hat FSI Open API Sandbox overview](https://img.youtube.com/vi/SrZHoGS8Lk4/0.jpg)](https://www.youtube.com/watch?v=SrZHoGS8Lk4){:target="_blank"}
+[![Red Hat FSI Open API Sandbox overview](https://img.youtube.com/vi/SrZHoGS8Lk4/0.jpg)](https://www.youtube.com/watch?v=SrZHoGS8Lk4)
 
 
 ## Contributing
